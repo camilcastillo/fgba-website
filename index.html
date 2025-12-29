@@ -1208,20 +1208,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
            style="margin-top: -2px;"
            onerror="this.style.display='none'"/>
     </p>
-  </div>
-</footer>
-</main>
-</div>
-<script>
-  document.getElementById("year-final").textContent = new Date().getFullYear();
-  
-  const mobileMenuBtn = document.getElementById("mobile-menu-btn");
-  const mobileMenu = document.getElementById("mobile-menu");
-  if (mobileMenuBtn && mobileMenu) {
-    mobileMenuBtn.addEventListener("click", () => {
-      mobileMenu.classList.toggle("hidden");
-    });
-  }
-</script>
+ </footer> <footer class="bg-[#0f172a] text-white py-10 w-full">
+        <div class="container mx-auto px-4 text-center">
+          <p class="text-sm">
+            © <span id="year-final"></span> Federación Gran Buenos Aires. Todos los derechos reservados.
+          </p>
+        </div>
+      </footer>
+
+    </main> </div> <script>
+    // ESTO HACE APARECER EL 2025
+    document.getElementById("year-final").textContent = new Date().getFullYear();
+
+    // ESTO HACE FUNCIONAR EL MENÚ DEL CELULAR
+    const mobileBtn = document.getElementById("mobile-menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+    if (mobileBtn && mobileMenu) {
+      mobileBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    }
+  </script>
 </body>
 </html>
