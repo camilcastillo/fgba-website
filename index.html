@@ -1223,26 +1223,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
  </main> 
   </div> 
 
-  <footer class="bg-[#0f172a] text-white py-12 w-full border-t border-slate-800">
-    <div class="container mx-auto px-4 text-center">
-      
-      <p class="text-base font-bold tracking-tight mb-2">
-        Federación de Patinaje Gran Buenos Aires
-      </p>
+<footer class="bg-[#0f172a] text-white py-12 w-full border-t border-slate-800">
+  <div class="container mx-auto px-4 text-center">
+    
+    <p class="text-base font-bold tracking-tight mb-2">
+      Federación de Patinaje Gran Buenos Aires
+    </p>
 
-      <p class="text-[10px] opacity-60 font-bold uppercase tracking-[0.2em]">
-        Todos los derechos reservados <span id="year-final"></span>
-      </p>
+    <p class="text-[10px] opacity-60 font-bold uppercase tracking-[0.2em]">
+      Todos los derechos reservados <span id="year-final"></span>
+    </p>
 
-      <p class="text-[10px] mt-8 opacity-40 uppercase tracking-[0.2em]">
-        Diseño y Desarrollo por 
-        <a href="mailto:camilacastillo.work@gmail.com" class="hover:text-blue-400 transition-colors underline decoration-slate-700 underline-offset-4">
-          Camila Castillo
-        </a>
-      </p>
+    <p class="text-[10px] mt-4 opacity-60 uppercase tracking-[0.2em]">
+      Visitas: <span class="font-bold">5.368✨</span>
+    </p>
 
-    </div>
-  </footer>
+    <p class="text-[10px] mt-8 opacity-40 uppercase tracking-[0.2em]">
+      Diseño y Desarrollo por 
+      <a href="mailto:camilacastillo.work@gmail.com" 
+         class="hover:text-blue-400 transition-colors underline decoration-slate-700 underline-offset-4">
+        Camila Castillo
+      </a>
+    </p>
+
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year-final').textContent = new Date().getFullYear();
+</script>
 
   <script>
     const spanAnio = document.getElementById("year-final");
