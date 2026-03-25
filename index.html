@@ -1,598 +1,197 @@
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
-  <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-PLGPQ8PJHF"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-PLGPQ8PJHF');
-</script>
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PLGPQ8PJHF"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-PLGPQ8PJHF');
+    </script>
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-TBBGRXQT');</script>
-    <meta name="google-site-verification" content="0YftTU65zwa6gLM4z_iBowmp-U_flItpwa3Igxal_Js" />
-    <link rel="icon" href="favicon.png">
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TBBGRXQT');</script>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Federación de Patinaje Gran Buenos Aires</title>
-    <meta
-      name="description"
-      content="Sumate a la Federación Gran Buenos Aires. Mucho más que una institución, somos una comunidad dedicada a potenciar el patinaje. Conocé nuestra gestión y formá parte de nuestra visión"
-    />
+    <meta name="description" content="Sumate a la Federación Gran Buenos Aires. Mucho más que una institución, somos una comunidad dedicada a potenciar el patinaje." />
+    
+    <link rel="icon" href="favicon.png">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              border: "hsl(var(--border))",
-              input: "hsl(var(--input))",
-              ring: "hsl(var(--ring))",
-              background: "hsl(var(--background))",
-              foreground: "hsl(var(--foreground))",
-              primary: {
-                DEFAULT: "hsl(var(--primary))",
-                foreground: "hsl(var(--primary-foreground))",
-              },
-              secondary: {
-                DEFAULT: "hsl(var(--secondary))",
-                foreground: "hsl(var(--secondary-foreground))",
-              },
-              destructive: {
-                DEFAULT: "hsl(var(--destructive))",
-                foreground: "hsl(var(--destructive-foreground))",
-              },
-              muted: {
-                DEFAULT: "hsl(var(--muted))",
-                foreground: "hsl(var(--muted-foreground))",
-              },
-              accent: {
-                DEFAULT: "hsl(var(--accent))",
-                foreground: "hsl(var(--accent-foreground))",
-              },
-              popover: {
-                DEFAULT: "hsl(var(--popover))",
-                foreground: "hsl(var(--popover-foreground))",
-              },
-              card: {
-                DEFAULT: "hsl(var(--card))",
-                foreground: "hsl(var(--card-foreground))",
-              },
-              "federation-blue": "#003366",
-              "federation-green": "#5fb345",
-              "federation-yellow": "#eae634",
-              "federation-red": "#da3532",
-              "federation-celeste": "#34bce1",
-              "federation-white": "#ffffff",
-              "federation-black": "#1a1a1a",
-              "federation-gray": "#e0e0e0",
-            },
-            borderRadius: {
-              lg: "var(--radius)",
-              md: "calc(var(--radius) - 2px)",
-              sm: "calc(var(--radius) - 4px)",
-            },
-          },
-        },
-      };
-    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
     <style>
-      :root {
-        --federation-blue: #003366;
-        --federation-green: #5fb345;
-        --federation-yellow: #eae634;
-        --federation-red: #da3532;
-        --federation-celeste: #34bce1;
-        --federation-white: #ffffff;
-        --federation-black: #1a1a1a;
-        --federation-gray: #e0e0e0;
+        :root {
+            --federation-blue: #003366;
+            --federation-red: #d32f2f;
+            --federation-yellow: #fdd835;
+            --federation-green: #8bc34a;
+            --federation-celeste: #69b0d8;
+        }
 
-        --background: 0 0% 100%;
-        --foreground: 222.2 84% 4.9%;
-        --card: 0 0% 100%;
-        --card-foreground: 222.2 84% 4.9%;
-        --popover: 0 0% 100%;
-        --popover-foreground: 222.2 84% 4.9%;
-        --primary: 222.2 47.4% 11.2%;
-        --primary-foreground: 210 40% 98%;
-        --secondary: 210 40% 96.1%;
-        --secondary-foreground: 222.2 47.4% 11.2%;
-        --muted: 210 40% 96.1%;
-        --muted-foreground: 215.4 16.3% 46.9%;
-        --accent: 210 40% 96.1%;
-        --accent-foreground: 222.2 47.4% 11.2%;
-        --destructive: 0 84.2% 60.2%;
-        --destructive-foreground: 210 40% 98%;
-        --border: 214.3 31.8% 91.4%;
-        --input: 214.3 31.8% 91.4%;
-        --ring: 222.2 84% 4.9%;
-        --radius: 0.5rem;
-      }
+        /* Estilos para el Dashboard de Cards */
+        .fgba-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            padding: 20px;
+        }
 
-      .dark {
-        --background: 222.2 84% 4.9%;
-        --foreground: 210 40% 98%;
-        --card: 222.2 84% 4.9%;
-        --card-foreground: 210 40% 98%;
-        --popover: 222.2 84% 4.9%;
-        --popover-foreground: 210 40% 98%;
-        --primary: 210 40% 98%;
-        --primary-foreground: 222.2 47.4% 11.2%;
-        --secondary: 217.2 32.6% 17.5%;
-        --secondary-foreground: 210 40% 98%;
-        --muted: 217.2 32.6% 17.5%;
-        --muted-foreground: 215 20.2% 65.1%;
-        --accent: 217.2 32.6% 17.5%;
-        --accent-foreground: 210 40% 98%;
-        --destructive: 0 62.8% 30.6%;
-        --destructive-foreground: 210 40% 98%;
-        --border: 217.2 32.6% 17.5%;
-        --input: 217.2 32.6% 17.5%;
-        --ring: 212.7 26.8% 83.9%;
-      }
+        .fgba-card {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #e0e0e0;
+            transition: transform 0.3s ease;
+        }
 
-      /* Custom federation styles */
-      .federation-blue {
-        color: var(--federation-blue);
-      }
-      .bg-federation-blue {
-        background-color: var(--federation-blue);
-      }
-      .federation-green {
-        color: var(--federation-green);
-      }
-      .bg-federation-green {
-        background-color: var(--federation-green);
-      }
-      .federation-yellow {
-        color: var(--federation-yellow);
-      }
-      .bg-federation-yellow {
-        background-color: var(--federation-yellow);
-      }
-      .federation-red {
-        color: var(--federation-red);
-      }
-      .bg-federation-red {
-        background-color: var(--federation-red);
-      }
-      .federation-celeste {
-        color: var(--federation-celeste);
-      }
-      .bg-federation-celeste {
-        background-color: var(--federation-celeste);
-      }
+        .fgba-card:hover { transform: translateY(-5px); }
 
-      /* Banner gradient background for header */
-      .federation-banner {
-        background: linear-gradient(
-          135deg,
-          #5fb345 0%,
-          #eae634 25%,
-          #da3532 50%,
-          #34bce1 75%,
-          #003366 100%
-        );
-        position: relative;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-      }
+        .card-header { height: 90px; display: flex; align-items: center; justify-content: center; }
+        .bg-red { background-color: var(--federation-red); }
+        .bg-yellow { background-color: var(--federation-yellow); }
+        .bg-blue { background-color: var(--federation-celeste); }
+        .bg-green { background-color: var(--federation-green); }
 
-      .federation-banner::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: linear-gradient(
-          180deg,
-          rgba(255, 255, 255, 0.1) 0%,
-          rgba(0, 0, 0, 0.2) 100%
-        );
-        pointer-events: none;
-      }
+        .header-icon { color: white; width: 45px; height: 45px; }
 
-      /* Gradient text effect for main title */
-      .gradient-text {
-        background: linear-gradient(135deg, #ffffff 0%, #e0f2ff 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-      }
+        .card-body { padding: 25px; flex-grow: 1; display: flex; flex-direction: column; }
+        .card-title { font-size: 1.15rem; font-weight: 800; color: #1a237e; margin-bottom: 12px; text-transform: uppercase; text-align: center; }
+        .card-desc { font-size: 0.9rem; color: #666; line-height: 1.5; margin-bottom: 20px; min-height: 45px; text-align: center; }
+
+        .card-img-container { width: 100%; height: 140px; background-color: #f9f9f9; border-radius: 6px; margin-bottom: 20px; overflow: hidden; display: flex; justify-content: center; align-items: center; }
+        .card-img-container img { max-width: 100%; max-height: 100%; object-fit: contain; }
+
+        .btn-list { display: flex; flex-direction: column; gap: 10px; margin-top: auto; }
+        .fgba-btn {
+            text-decoration: none; border-radius: 10px; padding: 12px 15px; font-size: 0.85rem; font-weight: 700;
+            display: flex; align-items: center; transition: filter 0.2s;
+        }
+        .fgba-btn i { margin-right: 12px; width: 18px; height: 18px; }
+
+        .btn-red { background-color: var(--federation-red); color: white; }
+        .btn-yellow { background-color: var(--federation-yellow); color: #333; justify-content: center; }
+        .btn-blue { background-color: var(--federation-celeste); color: #1a237e; justify-content: center; }
+        .btn-green { background-color: var(--federation-green); color: #1a237e; }
     </style>
-  </head>
-  <body class="bg-background text-foreground">
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TBBGRXQT"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "SportsOrganization",
-        "name": "Federación de Patinaje Gran Buenos Aires",
-        "description": "Federación oficial de patinaje artístico de Gran Buenos Aires con más de 100 clubes afiliados",
-        "url": "https://federacionpatinajegba.com",
-        "logo": "https://federacionpatinajegba.com/logo-federacion.png",
-        "sameAs": [
-          "https://www.facebook.com/federacionpatinajegba",
-          "https://www.instagram.com/federacionpatinajegba"
-        ],
-        "address": {
-          "@type": "PostalAddress",
-          "addressCountry": "AR",
-          "addressRegion": "Buenos Aires"
-        },
-        "sport": "Patinaje Artístico"
-      }
-    </script>
+</head>
 
-    <div class="min-h-screen bg-white">
-      <header class="bg-white shadow top-0 z-50">
-        <div class="container mx-auto px-6">
-          <div class="flex items-center justify-between min-h-20">
-            <!-- Logo -->
-            <div class="h-32 flex items-center justify-center">
-              <img
-                src="./public/images/companies/logo.png"
-                width="200"
-                height="200"
-                alt="logo"
-              />
-            </div>
-            <!-- Desktop Navigation -->
-            <nav class="hidden md:flex items-center gap-10">
-              <a
-                href="#inicio"
-                class="text-[#003D7A] hover:text-[#00A9E0] transition-colors font-semibold text-base"
-                >Inicio</a
-              >
-              <a
-                href="#fgba2026"
-                class="text-[#003D7A] hover:text-[#00A9E0] transition-colors font-semibold text-base"
-                >FGBA</a
-              >
-              <a
-                href="#deportes"
-                class="text-[#003D7A] hover:text-[#00A9E0] transition-colors font-semibold text-base"
-                >Deportes</a
-              >
-              <a
-                href="#novedades"
-                class="text-[#003D7A] hover:text-[#00A9E0] transition-colors font-semibold text-base"
-                >Novedades</a
-              >
-              <a
-                href="#institucion"
-                class="text-[#003D7A] hover:text-[#00A9E0] transition-colors font-semibold text-base"
-                >Institución</a
-              >                
-              <a
-                href="#reglamentos2026"
-                class="text-[#003D7A] hover:text-[#00A9E0] transition-colors font-semibold text-base"
-                >Reglamentación</a
-              >
-                <a
-                href="#calendario2026"
-                class="text-[#003D7A] hover:text-[#00A9E0] transition-colors font-semibold text-base"
-                >Calendario</a
-              >
-                <a
-                href="#contacto"
-                class="text-[#003D7A] hover:text-[#00A9E0] transition-colors font-semibold text-base"
-                >Contacto</a
-              >
-            </nav>
+<body class="bg-gray-50 text-gray-900">
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TBBGRXQT" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-            <!-- Mobile Menu Button -->
-            <div class="md:hidden">
-              <button
-                id="mobile-menu-btn"
-                class="flex flex-col gap-1.5 p-3"
-                aria-label="Menú"
-              >
-                <span class="w-6 h-0.5 bg-[#003D7A] rounded-full"></span>
-                <span class="w-6 h-0.5 bg-[#003D7A] rounded-full"></span>
-                <span class="w-6 h-0.5 bg-[#003D7A] rounded-full"></span>
-              </button>
-            </div>
-          </div>
-
-          <!-- Mobile Menu Dropdown -->
-          <nav
-            id="mobile-menu"
-            class="hidden md:hidden pb-4 border-t border-gray-200 mt-2"
-          >
-            <a
-                href="#inicio"
-                class="text-[#003D7A] hover:text-[#00A9E0] transition-colors font-semibold text-base"
-                >Inicio</a
-              >
-              <a
-                href="#fgba2026"
-                class="text-[#003D7A] hover:text-[#00A9E0] transition-colors font-semibold text-base"
-                >FGBA</a
-              >
-              <a
-                href="#deportes"
-                class="text-[#003D7A] hover:text-[#00A9E0] transition-colors font-semibold text-base"
-                >Deportes</a
-              >
-              <a
-                href="#novedades"
-                class="text-[#003D7A] hover:text-[#00A9E0] transition-colors font-semibold text-base"
-                >Novedades</a
-              >
-              <a
-                href="#institucion"
-                class="text-[#003D7A] hover:text-[#00A9E0] transition-colors font-semibold text-base"
-                >Institución</a
-              >                
-              <a
-                href="#reglamentos2026"
-                class="text-[#003D7A] hover:text-[#00A9E0] transition-colors font-semibold text-base"
-                >Reglamentación</a
-              >
-                <a
-                href="#calendario2026"
-                class="text-[#003D7A] hover:text-[#00A9E0] transition-colors font-semibold text-base"
-                >Calendario</a
-              >
-                <a
-                href="#contacto"
-                class="text-[#003D7A] hover:text-[#00A9E0] transition-colors font-semibold text-base"
-                >Contacto</a
-              >
-            </nav>
-        </div>
-      </header>
-
-      <main>
-        <section
-          id="inicio"
-          class="relative min-h-[650px] flex items-center justify-center overflow-hidden"
-          style="
-            background: linear-gradient(
-              90deg,
-              #b8d432 0%,
-              #f9b233 15%,
-              #f15a29 30%,
-              #e94190 50%,
-              #9b59b6 70%,
-              #00a9e0 100%
-            );
-          "
-        >
-          <div class="container mx-auto px-6 py-24 text-center relative z-10">
-            <h1
-              class="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-8 leading-tight tracking-tight drop-shadow-lg"
-            >
-              FEDERACIÓN DE PATINAJE
-              <br />
-              GRAN BUENOS AIRES
-            </h1>
-            <p
-              class="text-2xl md:text-3xl lg:text-4xl text-white mb-12 font-normal tracking-wide drop-shadow-md"
-            >
-              Pasión, Disciplina y Excelencia sobre Ruedas
-            </p>
-
-            <!-- Chevron down arrow -->
-            <div class="mb-8">
-              <svg
-                class="w-12 h-12 mx-auto text-white opacity-80 animate-bounce"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M19 9l-7 7-7-7"
-                />
-              </svg>
-            </div>
-
-            <button
-              onclick="document.getElementById('institucion').scrollIntoView({ behavior: 'smooth' })"
-              class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive cursor-pointer bg-white text-[#003D7A] hover:bg-gray-100 text-base px-10 py-6 rounded-full font-bold shadow-xl hover:shadow-2xl h-auto"
-            >
-              Conocé Nuestra Institución
-            </button>
-          </div>
-       <section id="fgba-dashboard" style="padding: 60px 0; background-color: #f5f5f5;">
-    <div style="max-width: 1200px; margin: 0 auto; px: 20px;">
-        
-        <style>
-            .fgba-grid {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-                gap: 25px;
-                padding: 20px;
-            }
-
-            .fgba-card {
-                background: #fff;
-                border-radius: 12px;
-                overflow: hidden;
-                box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-                display: flex;
-                flex-direction: column;
-                border: 1px solid #e0e0e0;
-                transition: transform 0.3s ease;
-            }
-
-            .fgba-card:hover { transform: translateY(-5px); }
-
-            .card-header {
-                height: 90px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-
-            /* Colores de Cabecera */
-            .bg-red { background-color: #d32f2f; }
-            .bg-yellow { background-color: #fdd835; }
-            .bg-blue { background-color: #69b0d8; }
-            .bg-green { background-color: #8bc34a; }
-
-            .header-icon { color: white; width: 45px; height: 45px; }
-
-            .card-body {
-                padding: 25px;
-                flex-grow: 1;
-                display: flex;
-                flex-direction: column;
-            }
-
-            .card-title {
-                font-size: 1.15rem;
-                font-weight: 800;
-                color: #1a237e;
-                margin-bottom: 12px;
-                text-transform: uppercase;
-                text-align: center;
-            }
-
-            .card-desc {
-                font-size: 0.9rem;
-                color: #666;
-                line-height: 1.5;
-                margin-bottom: 20px;
-                min-height: 45px;
-                text-align: center;
-            }
-
-            .card-img-container {
-                width: 100%;
-                height: 140px;
-                background-color: #f9f9f9;
-                border-radius: 6px;
-                margin-bottom: 20px;
-                overflow: hidden;
-            }
-
-            .card-img-container img {
-                width: 100%;
-                height: 100%;
-                object-fit: contain;
-            }
-
-            .btn-list {
-                display: flex;
-                flex-direction: column;
-                gap: 10px;
-                margin-top: auto;
-            }
-
-            .fgba-btn {
-                text-decoration: none;
-                border-radius: 10px;
-                padding: 12px 15px;
-                font-size: 0.85rem;
-                font-weight: 700;
-                display: flex;
-                align-items: center;
-                transition: filter 0.2s;
-            }
-
-            .fgba-btn i { margin-right: 12px; width: 18px; height: 18px; }
-            .fgba-btn:hover { filter: brightness(1.05); }
-
-            /* Estilos específicos de botones por columna */
-            .btn-red { background-color: #d32f2f; color: white; }
-            .btn-yellow { background-color: #fdd835; color: #333; justify-content: center; }
-            .btn-blue { background-color: #69b0d8; color: #1a237e; justify-content: center; }
-            .btn-green { background-color: #8bc34a; color: #1a237e; }
-        </style>
-
-        <div class="fgba-grid">
-            
-            <div class="fgba-card">
-                <div class="card-header bg-red">
-                    <i data-lucide="gavel" class="header-icon"></i>
+    <div class="min-h-screen">
+        <header class="bg-white shadow sticky top-0 z-50">
+            <div class="container mx-auto px-6 flex items-center justify-between min-h-20">
+                <div class="h-20 flex items-center">
+                    <img src="./public/images/companies/logo.png" width="120" alt="logo" />
                 </div>
-                <div class="card-body">
-                    <h2 class="card-title">REGLAMENTOS</h2>
-                    <p class="card-desc">Normativas oficiales vigentes para la temporada 2026.</p>
-                    <div class="btn-list">
-                        <a href="https://drive.google.com/drive/folders/1DIhtuJstekYZJQ27tk4MZKi1cQm4cKRF?usp=sharing" target="_blank" class="fgba-btn btn-red">
-                            <i data-lucide="file-text"></i> REGLAMENTOS C.A.P 2026
-                        </a>
-                        <a href="https://drive.google.com/drive/folders/1BxoePixxSpgOw-x7JZViqkAm9HSOUqd1?usp=sharing" target="_blank" class="fgba-btn btn-red">
-                            <i data-lucide="globe"></i> WORLD SKATE 2026
-                        </a>
-                        <a href="https://drive.google.com/file/d/1Sfby3oJ3rIbGaUoq3AP0aLR9XOxB1Knq/view?usp=sharing" target="_blank" class="fgba-btn btn-red">
-                            <i data-lucide="info"></i> INTERNOS FGBA
-                        </a>
+                <nav class="hidden md:flex items-center gap-8">
+                    <a href="#inicio" class="text-[#003D7A] hover:text-[#00A9E0] font-semibold">Inicio</a>
+                    <a href="#fgba2026" class="text-[#003D7A] hover:text-[#00A9E0] font-semibold">FGBA</a>
+                    <a href="#reglamentos" class="text-[#003D7A] hover:text-[#00A9E0] font-semibold">Reglamentos</a>
+                    <a href="#contacto" class="text-[#003D7A] hover:text-[#00A9E0] font-semibold">Contacto</a>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <section id="inicio" class="relative min-h-[600px] flex items-center justify-center text-center" style="background: linear-gradient(90deg, #b8d432 0%, #f9b233 15%, #f15a29 30%, #e94190 50%, #9b59b6 70%, #00a9e0 100%);">
+                <div class="container mx-auto px-6 py-20 relative z-10">
+                    <h1 class="text-5xl md:text-7xl font-black text-white mb-8 drop-shadow-lg">FEDERACIÓN DE PATINAJE<br>GRAN BUENOS AIRES</h1>
+                    <p class="text-2xl md:text-3xl text-white mb-12 drop-shadow-md">Pasión, Disciplina y Excelencia sobre Ruedas</p>
+                    <button onclick="document.getElementById('fgba-dashboard').scrollIntoView({ behavior: 'smooth' })" class="bg-white text-[#003D7A] px-10 py-4 rounded-full font-bold shadow-xl hover:bg-gray-100 transition-all">
+                        Ver Documentación 2026
+                    </button>
+                </div>
+            </section>
+
+            <section id="fgba-dashboard" class="py-20 bg-[#f5f5f5]">
+                <div class="container mx-auto px-4">
+                    <div class="text-center mb-12">
+                        <h2 class="text-4xl font-bold text-[#003D7A] uppercase tracking-tight">Gestión y Documentación 2026</h2>
+                        <div class="w-20 h-1 bg-[#da3532] mx-auto mt-4"></div>
+                    </div>
+
+                    <div class="fgba-grid">
+                        <div class="fgba-card">
+                            <div class="card-header bg-red">
+                                <i data-lucide="gavel" class="header-icon"></i>
+                            </div>
+                            <div class="card-body">
+                                <h2 class="card-title">REGLAMENTOS</h2>
+                                <p class="card-desc">Normativas oficiales vigentes temporada 2026.</p>
+                                <div class="btn-list">
+                                    <a href="https://drive.google.com/drive/folders/1DIhtuJstekYZJQ27tk4MZKi1cQm4cKRF?usp=sharing" target="_blank" class="fgba-btn btn-red"><i data-lucide="file-text"></i> REGLAMENTOS C.A.P</a>
+                                    <a href="https://drive.google.com/drive/folders/1BxoePixxSpgOw-x7JZViqkAm9HSOUqd1?usp=sharing" target="_blank" class="fgba-btn btn-red"><i data-lucide="globe"></i> WORLD SKATE</a>
+                                    <a href="https://drive.google.com/file/d/1Sfby3oJ3rIbGaUoq3AP0aLR9XOxB1Knq/view?usp=sharing" target="_blank" class="fgba-btn btn-red"><i data-lucide="info"></i> INTERNOS FGBA</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="fgba-card">
+                            <div class="card-header bg-yellow">
+                                <i data-lucide="calendar-days" class="header-icon"></i>
+                            </div>
+                            <div class="card-body">
+                                <h2 class="card-title">CALENDARIO</h2>
+                                <p class="card-desc">Calendario regional e internacional 2026.</p>
+                                <div class="card-img-container">
+                                    <img src="./public/images/design-mode/calendario2026.jpg" alt="Calendario">
+                                </div>
+                                <a href="https://drive.google.com/file/d/1isdb5RsVK0wXMw4HLuCMVxIMWf2UaYp9/view?usp=sharing" target="_blank" class="fgba-btn btn-yellow">VER CALENDARIO</a>
+                            </div>
+                        </div>
+
+                        <div class="fgba-card">
+                            <div class="card-header bg-blue">
+                                <i data-lucide="megaphone" class="header-icon"></i>
+                            </div>
+                            <div class="card-body">
+                                <h2 class="card-title">NOTAS CAP</h2>
+                                <p class="card-desc">Comunicados oficiales de la Confederación.</p>
+                                <div class="card-img-container">
+                                    <img src="./public/images/design-mode/notascap.png" alt="Notas CAP">
+                                </div>
+                                <a href="https://drive.google.com/drive/folders/1KHXmdDYLCcMz8LK_txDqsOrGaxrb1kOX?usp=sharing" target="_blank" class="fgba-btn btn-blue">VER NOTAS</a>
+                            </div>
+                        </div>
+
+                        <div class="fgba-card">
+                            <div class="card-header bg-green">
+                                <i data-lucide="shield-check" class="header-icon"></i>
+                            </div>
+                            <div class="card-body">
+                                <h2 class="card-title">FGBA 2026</h2>
+                                <p class="card-desc">Información institucional y boletines.</p>
+                                <div class="btn-list">
+                                    <a href="https://drive.google.com/drive/folders/1tZXXa7mr5em9Ntci0xbmoa1QzMDeqeSG?usp=sharing" target="_blank" class="fgba-btn btn-green"><i data-lucide="newspaper"></i> BOLETINES</a>
+                                    <a href="https://drive.google.com/drive/folders/1maPVIw3MO0WyikX9Hp5jQDqcWYN2KjjK?usp=sharing" target="_blank" class="fgba-btn btn-green"><i data-lucide="list-checks"></i> PROGRAMACIONES</a>
+                                    <a href="https://drive.google.com/drive/folders/1cuR-7GMp85Bi1O0xnXxrOrFPFxVf_YBN" target="_blank" class="fgba-btn btn-green"><i data-lucide="scroll"></i> ESTATUTO</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </section>
+        </main>
 
-            <div class="fgba-card">
-                <div class="card-header bg-yellow">
-                    <i data-lucide="calendar-days" class="header-icon"></i>
-                </div>
-                <div class="card-body">
-                    <h2 class="card-title">CALENDARIO</h2>
-                    <p class="card-desc">Calendario regional, nacional e internacional 2026.</p>
-                    <div class="card-img-container">
-                        <img src="./public/images/design-mode/calendario2026.jpg" alt="Calendario Oficial">
-                    </div>
-                    <a href="https://drive.google.com/file/d/1isdb5RsVK0wXMw4HLuCMVxIMWf2UaYp9/view?usp=sharing" target="_blank" class="fgba-btn btn-yellow">
-                        VER CALENDARIO
-                    </a>
-                </div>
-            </div>
-
-            <div class="fgba-card">
-                <div class="card-header bg-blue">
-                    <i data-lucide="megaphone" class="header-icon"></i>
-                </div>
-                <div class="card-body">
-                    <h2 class="card-title">NOTAS CAP</h2>
-                    <p class="card-desc">Comunicados oficiales de la Confederación Argentina de Patín.</p>
-                    <div class="card-img-container">
-                        <img src="./public/images/design-mode/notascap.png" alt="Notas CAP">
-                    </div>
-                    <a href="https://drive.google.com/drive/folders/1KHXmdDYLCcMz8LK_txDqsOrGaxrb1kOX?usp=sharing" target="_blank" class="fgba-btn btn-blue">
-                        VER NOTAS
-                    </a>
-                </div>
-            </div>
-
-            <div class="fgba-card">
-                <div class="card-header bg-green">
-                    <i data-lucide="shield-check" class="header-icon"></i>
-                </div>
-                <div class="card-body">
-                    <h2 class="card-title">FGBA 2026</h2>
-                    <p class="card-desc">Información institucional y documentos oficiales.</p>
-                    <div class="btn-list">
-                        <a href="https://drive.google.com/drive/folders/1tZXXa7mr5em9Ntci0xbmoa1QzMDeqeSG?usp=sharing" target="_blank" class="fgba-btn btn-green">
-                            <i data-lucide="newspaper"></i> BOLETINES
-                        </a>
-                        <a href="https://drive.google.com/drive/folders/1maPVIw3MO0WyikX9Hp5jQDqcWYN2KjjK?usp=sharing" target="_blank" class="btn btn--green" style="background-color: #8bc34a; color: #1a237e; text-decoration: none; border-radius: 10px; padding: 12px 15px; font-size: 0.85rem; font-weight: 700; display: flex; align-items: center;">
-                            <i data-lucide="list-checks" style="margin-right: 12px;"></i> PROGRAMACIONES
-                        </a>
-                        <a href="https://drive.google.com/drive/folders/1cuR-7GMp85Bi1O0xnXxrOrFPFxVf_YBN" target="_blank" class="fgba-btn btn-green">
-                            <i data-lucide="scroll"></i> ESTATUTO
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
+        <footer class="bg-[#003366] text-white py-10 text-center">
+            <p>&copy; 2026 Federación de Patinaje Gran Buenos Aires - Todos los derechos reservados.</p>
+        </footer>
     </div>
-</section>
 
+    <script>
+        // Inicializar iconos
+        lucide.createIcons();
+    </script>
+</body>
+</html>
 <script src="https://unpkg.com/lucide@latest"></script>
 <script>
     lucide.createIcons();
