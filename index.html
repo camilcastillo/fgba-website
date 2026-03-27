@@ -1,384 +1,128 @@
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
-  <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-PLGPQ8PJHF"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-PLGPQ8PJHF');
-</script>
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-TBBGRXQT');</script>
-    <meta name="google-site-verification" content="0YftTU65zwa6gLM4z_iBowmp-U_flItpwa3Igxal_Js" />
-    <link rel="icon" href="favicon.png">
+<head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    
+    <link rel="icon" href="favicon.png?v=2">
+    
     <title>Federación de Patinaje Gran Buenos Aires</title>
-    <meta
-      name="description"
-      content="Sumate a la Federación Gran Buenos Aires. Mucho más que una institución, somos una comunidad dedicada a potenciar el patinaje. Conocé nuestra gestión y formá parte de nuestra visión"
-    />
+    <meta name="description" content="Sumate a la Federación Gran Buenos Aires. Mucho más que una institución, somos una comunidad dedicada a potenciar el patinaje." />
+    <meta name="google-site-verification" content="0YftTU65zwa6gLM4z_iBowmp-U_flItpwa3Igxal_Js" />
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PLGPQ8PJHF"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-PLGPQ8PJHF');
+    </script>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TBBGRXQT');</script>
+
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
     <script>
       tailwind.config = {
-        darkMode: "class",
         theme: {
           extend: {
             colors: {
-              border: "hsl(var(--border))",
-              input: "hsl(var(--input))",
-              ring: "hsl(var(--ring))",
-              background: "hsl(var(--background))",
-              foreground: "hsl(var(--foreground))",
-              primary: {
-                DEFAULT: "hsl(var(--primary))",
-                foreground: "hsl(var(--primary-foreground))",
-              },
-              secondary: {
-                DEFAULT: "hsl(var(--secondary))",
-                foreground: "hsl(var(--secondary-foreground))",
-              },
-              destructive: {
-                DEFAULT: "hsl(var(--destructive))",
-                foreground: "hsl(var(--destructive-foreground))",
-              },
-              muted: {
-                DEFAULT: "hsl(var(--muted))",
-                foreground: "hsl(var(--muted-foreground))",
-              },
-              accent: {
-                DEFAULT: "hsl(var(--accent))",
-                foreground: "hsl(var(--accent-foreground))",
-              },
-              popover: {
-                DEFAULT: "hsl(var(--popover))",
-                foreground: "hsl(var(--popover-foreground))",
-              },
-              card: {
-                DEFAULT: "hsl(var(--card))",
-                foreground: "hsl(var(--card-foreground))",
-              },
               "federation-blue": "#003366",
+              "federation-red": "#da3532",
               "federation-green": "#5fb345",
               "federation-yellow": "#eae634",
-              "federation-red": "#da3532",
               "federation-celeste": "#34bce1",
-              "federation-white": "#ffffff",
-              "federation-black": "#1a1a1a",
-              "federation-gray": "#e0e0e0",
-            },
-            borderRadius: {
-              lg: "var(--radius)",
-              md: "calc(var(--radius) - 2px)",
-              sm: "calc(var(--radius) - 4px)",
-            },
-          },
-        },
+            }
+          }
+        }
       };
     </script>
+
     <style>
-      :root {
-        --federation-blue: #003366;
-        --federation-green: #5fb345;
-        --federation-yellow: #eae634;
-        --federation-red: #da3532;
-        --federation-celeste: #34bce1;
-        --federation-white: #ffffff;
-        --federation-black: #1a1a1a;
-        --federation-gray: #e0e0e0;
-
-        --background: 0 0% 100%;
-        --foreground: 222.2 84% 4.9%;
-        --card: 0 0% 100%;
-        --card-foreground: 222.2 84% 4.9%;
-        --popover: 0 0% 100%;
-        --popover-foreground: 222.2 84% 4.9%;
-        --primary: 222.2 47.4% 11.2%;
-        --primary-foreground: 210 40% 98%;
-        --secondary: 210 40% 96.1%;
-        --secondary-foreground: 222.2 47.4% 11.2%;
-        --muted: 210 40% 96.1%;
-        --muted-foreground: 215.4 16.3% 46.9%;
-        --accent: 210 40% 96.1%;
-        --accent-foreground: 222.2 47.4% 11.2%;
-        --destructive: 0 84.2% 60.2%;
-        --destructive-foreground: 210 40% 98%;
-        --border: 214.3 31.8% 91.4%;
-        --input: 214.3 31.8% 91.4%;
-        --ring: 222.2 84% 4.9%;
-        --radius: 0.5rem;
-      }
-
-      .dark {
-        --background: 222.2 84% 4.9%;
-        --foreground: 210 40% 98%;
-        --card: 222.2 84% 4.9%;
-        --card-foreground: 210 40% 98%;
-        --popover: 222.2 84% 4.9%;
-        --popover-foreground: 210 40% 98%;
-        --primary: 210 40% 98%;
-        --primary-foreground: 222.2 47.4% 11.2%;
-        --secondary: 217.2 32.6% 17.5%;
-        --secondary-foreground: 210 40% 98%;
-        --muted: 217.2 32.6% 17.5%;
-        --muted-foreground: 215 20.2% 65.1%;
-        --accent: 217.2 32.6% 17.5%;
-        --accent-foreground: 210 40% 98%;
-        --destructive: 0 62.8% 30.6%;
-        --destructive-foreground: 210 40% 98%;
-        --border: 217.2 32.6% 17.5%;
-        --input: 217.2 32.6% 17.5%;
-        --ring: 212.7 26.8% 83.9%;
-      }
-
-      /* Custom federation styles */
-      .federation-blue {
-        color: var(--federation-blue);
-      }
-      .bg-federation-blue {
-        background-color: var(--federation-blue);
-      }
-      .federation-green {
-        color: var(--federation-green);
-      }
-      .bg-federation-green {
-        background-color: var(--federation-green);
-      }
-      .federation-yellow {
-        color: var(--federation-yellow);
-      }
-      .bg-federation-yellow {
-        background-color: var(--federation-yellow);
-      }
-      .federation-red {
-        color: var(--federation-red);
-      }
-      .bg-federation-red {
-        background-color: var(--federation-red);
-      }
-      .federation-celeste {
-        color: var(--federation-celeste);
-      }
-      .bg-federation-celeste {
-        background-color: var(--federation-celeste);
-      }
-
-      /* Banner gradient background for header */
-      .federation-banner {
-        background: linear-gradient(
-          135deg,
-          #5fb345 0%,
-          #eae634 25%,
-          #da3532 50%,
-          #34bce1 75%,
-          #003366 100%
-        );
+      /* ANTI-BAILE LATERAL */
+      html, body {
+        overflow-x: hidden;
+        width: 100%;
+        margin: 0;
+        padding: 0;
         position: relative;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
       }
 
-      .federation-banner::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: linear-gradient(
-          180deg,
-          rgba(255, 255, 255, 0.1) 0%,
-          rgba(0, 0, 0, 0.2) 100%
-        );
-        pointer-events: none;
+      .portal-card { 
+        background: #ffffff; 
+        border-radius: 16px; 
+        border: 1px solid #eef2f6; 
+        height: 100%; 
+        transition: all 0.3s ease; 
+        display: flex;
+        flex-direction: column;
       }
-
-      /* Gradient text effect for main title */
-      .gradient-text {
-        background: linear-gradient(135deg, #ffffff 0%, #e0f2ff 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-      }
+      .portal-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+      .p-header { height: 90px; display: flex; align-items: center; justify-content: center; color: white; border-radius: 16px 16px 0 0; }
+      .p-body { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; text-align: center; }
+      .p-title { font-size: 1.15rem; font-weight: 800; color: #003366; margin-bottom: 12px; text-transform: uppercase; }
+      .p-img-box { width: 100%; height: 130px; background: #f8fafc; border-radius: 12px; margin-bottom: 15px; display: flex; justify-content: center; align-items: center; overflow: hidden; }
+      .p-img-box img { max-width: 90%; max-height: 90%; object-fit: contain; }
+      .p-btn { text-decoration: none; border-radius: 10px; padding: 10px; font-size: 13px; font-weight: 700; transition: all 0.2s ease; margin-bottom: 6px; display: flex; justify-content: center; }
     </style>
-  </head>
-  <body class="bg-background text-foreground">
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TBBGRXQT"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "SportsOrganization",
-        "name": "Federación de Patinaje Gran Buenos Aires",
-        "description": "Federación oficial de patinaje artístico de Gran Buenos Aires con más de 100 clubes afiliados",
-        "url": "https://federacionpatinajegba.com",
-        "logo": "https://federacionpatinajegba.com/logo-federacion.png",
-        "sameAs": [
-          "https://www.facebook.com/federacionpatinajegba",
-          "https://www.instagram.com/federacionpatinajegba"
-        ],
-        "address": {
-          "@type": "PostalAddress",
-          "addressCountry": "AR",
-          "addressRegion": "Buenos Aires"
-        },
-        "sport": "Patinaje Artístico"
-      }
-    </script>
+</head>
 
-    <div class="min-h-screen bg-white">
-      <header class="bg-white shadow top-0 z-50">
-        <div class="container mx-auto px-6">
-          <div class="flex items-center justify-between min-h-20">
-            <!-- Logo -->
-            <div class="h-32 flex items-center justify-center">
-              <img
-                src="./public/images/companies/logo.png"
-                width="200"
-                height="200"
-                alt="logo"
-              />
-            </div>
-            <!-- Desktop Navigation -->
-            <nav class="hidden md:flex items-center gap-10">
-              <a
-                href="#inicio"
-                class="text-[#003D7A] hover:text-[#00A9E0] transition-colors font-semibold text-base"
-                >Inicio</a
-              >
-              <a
-                href="#deportes"
-                class="text-[#003D7A] hover:text-[#00A9E0] transition-colors font-semibold text-base"
-                >Deportes</a
-              >
-              <a
-                href="#novedades"
-                class="text-[#003D7A] hover:text-[#00A9E0] transition-colors font-semibold text-base"
-                >Novedades</a
-              >
-              <a
-                href="#institucion"
-                class="text-[#003D7A] hover:text-[#00A9E0] transition-colors font-semibold text-base"
-                >Institución</a
-              >                
-              <a
-                href="#reglamentos2026"
-                class="text-[#003D7A] hover:text-[#00A9E0] transition-colors font-semibold text-base"
-                >Reglamentación</a
-              >
-                <a
-                href="#calendario2026"
-                class="text-[#003D7A] hover:text-[#00A9E0] transition-colors font-semibold text-base"
-                >Calendario</a
-              >
-                <a
-                href="#fgba2026"
-                class="text-[#003D7A] hover:text-[#00A9E0] transition-colors font-semibold text-base"
-                >FGBA</a
-              >
-                <a
-                href="#contacto"
-                class="text-[#003D7A] hover:text-[#00A9E0] transition-colors font-semibold text-base"
-                >Contacto</a
-              >
-            </nav>
-
-            <!-- Mobile Menu Button -->
-            <div class="md:hidden">
-              <button
-                id="mobile-menu-btn"
-                class="flex flex-col gap-1.5 p-3"
-                aria-label="Menú"
-              >
-                <span class="w-6 h-0.5 bg-[#003D7A] rounded-full"></span>
-                <span class="w-6 h-0.5 bg-[#003D7A] rounded-full"></span>
-                <span class="w-6 h-0.5 bg-[#003D7A] rounded-full"></span>
-              </button>
-            </div>
+<body class="bg-white text-slate-900 overflow-x-hidden">
+  <div class="min-h-screen bg-white overflow-x-hidden">
+    
+    <header class="bg-white shadow sticky top-0 z-50">
+      <div class="container mx-auto px-4 md:px-6">
+        <div class="flex items-center justify-between h-24 md:h-32">
+          
+          <div class="h-20 md:h-28 flex items-center flex-shrink-0">
+            <img src="./public/images/companies/logo.png" class="h-20 md:h-24 w-auto object-contain" alt="FGBA Logo" />
           </div>
 
-          <!-- Mobile Menu Dropdown -->
-          <nav
-            id="mobile-menu"
-            class="hidden md:hidden pb-4 border-t border-gray-200 mt-2"
-          >
-            <a
-              href="#inicio"
-              class="mobile-link block px-4 py-3 text-[#003D7A] hover:bg-gray-50 font-semibold"
-              >Inicio</a
-            >
-            <a
-              href="#institucion"
-              class="mobile-link block px-4 py-3 text-[#003D7A] hover:bg-gray-50 font-semibold"
-              >Institución</a
-            >
-            <a
-              href="#novedades"
-              class="mobile-link block px-4 py-3 text-[#003D7A] hover:bg-gray-50 font-semibold"
-              >Novedades</a
-            >
-            <a
-              href="#contacto"
-              class="mobile-link block px-4 py-3 text-[#003D7A] hover:bg-gray-50 font-semibold"
-              >Contacto</a
-            >
+          <nav class="hidden md:flex items-center gap-6">
+            <a href="#inicio" class="text-[#003D7A] hover:text-[#00A9E0] transition-colors font-bold uppercase text-sm">Inicio</a>
+            <a href="#informacion" class="text-[#003D7A] hover:text-[#00A9E0] transition-colors font-bold uppercase text-sm">Información</a>
+            <a href="#deportes" class="text-[#003D7A] hover:text-[#00A9E0] transition-colors font-bold uppercase text-sm">Deportes</a>
+            <a href="#novedades" class="text-[#003D7A] hover:text-[#00A9E0] transition-colors font-bold uppercase text-sm">Novedades</a>
+            <a href="#institucion" class="text-[#003D7A] hover:text-[#00A9E0] transition-colors font-bold uppercase text-sm">Institución</a>
+            <a href="#contacto" class="text-[#003D7A] hover:text-[#00A9E0] transition-colors font-bold uppercase text-sm">Contacto</a>
           </nav>
-        </div>
-      </header>
 
-      <main>
-        <section
-          id="inicio"
-          class="relative min-h-[650px] flex items-center justify-center overflow-hidden"
-          style="
-            background: linear-gradient(
-              90deg,
-              #b8d432 0%,
-              #f9b233 15%,
-              #f15a29 30%,
-              #e94190 50%,
-              #9b59b6 70%,
-              #00a9e0 100%
-            );
-          "
-        >
-          <div class="container mx-auto px-6 py-24 text-center relative z-10">
-            <h1
-              class="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-8 leading-tight tracking-tight drop-shadow-lg"
-            >
-              FEDERACIÓN DE PATINAJE
-              <br />
-              GRAN BUENOS AIRES
-            </h1>
-            <p
-              class="text-2xl md:text-3xl lg:text-4xl text-white mb-12 font-normal tracking-wide drop-shadow-md"
-            >
-              Pasión, Disciplina y Excelencia sobre Ruedas
-            </p>
-
-            <!-- Chevron down arrow -->
-            <div class="mb-8">
-              <svg
-                class="w-12 h-12 mx-auto text-white opacity-80 animate-bounce"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M19 9l-7 7-7-7"
-                />
+          <div class="md:hidden">
+            <button id="mobile-menu-btn" class="p-2 text-[#003D7A] focus:outline-none">
+              <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
               </svg>
-            </div>
-       <button onclick="document.getElementById('informacion').scrollIntoView({ behavior: 'smooth' })"
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <nav id="mobile-menu" class="hidden flex-col bg-white border-t border-gray-100 md:hidden pb-4 shadow-inner">
+        <a href="#inicio" class="mobile-link block px-6 py-4 text-[#003D7A] font-bold uppercase text-xs border-b border-gray-50">Inicio</a>
+        <a href="#informacion" class="mobile-link block px-6 py-4 text-[#003D7A] font-bold uppercase text-xs border-b border-gray-50">Información</a>
+        <a href="#deportes" class="mobile-link block px-6 py-4 text-[#003D7A] font-bold uppercase text-xs border-b border-gray-50">Deportes</a>
+        <a href="#novedades" class="mobile-link block px-6 py-4 text-[#003D7A] font-bold uppercase text-xs border-b border-gray-50">Novedades</a>
+        <a href="#institucion" class="mobile-link block px-6 py-4 text-[#003D7A] font-bold uppercase text-xs border-b border-gray-50">Institución</a>
+        <a href="#contacto" class="mobile-link block px-6 py-4 text-[#003D7A] font-bold uppercase text-xs">Contacto</a>
+      </nav>
+    </header>
+
+    <main class="w-full">
+      <section id="inicio" class="relative min-h-[500px] flex items-center justify-center overflow-hidden w-full"
+        style="background: linear-gradient(90deg, #b8d432 0%, #f9b233 15%, #f15a29 30%, #e94190 50%, #9b59b6 70%, #00a9e0 100%);">
+        <div class="container mx-auto px-6 py-24 text-center relative z-10">
+          <h1 class="text-3xl sm:text-5xl md:text-7xl font-black text-white mb-6 leading-tight drop-shadow-lg uppercase">
+            Federación de Patinaje<br />Gran Buenos Aires
+          </h1>
+          <p class="text-lg md:text-3xl text-white mb-10 font-normal drop-shadow-md">
+            Pasión, Disciplina y Excelencia sobre Ruedas
+          </p>
+          <button onclick="document.getElementById('informacion').scrollIntoView({ behavior: 'smooth' })"
             class="bg-white text-[#003D7A] hover:bg-gray-100 text-base px-10 py-5 rounded-full font-bold shadow-xl transition-all h-auto cursor-pointer">
             VER INFO
           </button>
