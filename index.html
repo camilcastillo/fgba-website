@@ -1,35 +1,47 @@
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
-  <head>
-
-<body class="bg-white text-slate-900 overflow-x-hidden w-full">
-  <div class="min-h-screen bg-white overflow-x-hidden">
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-PLGPQ8PJHF"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-PLGPQ8PJHF');
-</script>
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-TBBGRXQT');</script>
-    <meta name="google-site-verification" content="0YftTU65zwa6gLM4z_iBowmp-U_flItpwa3Igxal_Js" />
-    <link rel="icon" href="favicon.png">
+<head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    
+    <link rel="icon" href="favicon.png?v=4">
+    
     <title>Federación de Patinaje Gran Buenos Aires</title>
-    <meta
-      name="description"
-      content="Sumate a la Federación Gran Buenos Aires. Mucho más que una institución, somos una comunidad dedicada a potenciar el patinaje. Conocé nuestra gestión y formá parte de nuestra visión"
-    />
+    <meta name="description" content="Sumate a la Federación Gran Buenos Aires. Mucho más que una institución, somos una comunidad dedicada a potenciar el patinaje." />
+    <meta name="google-site-verification" content="0YftTU65zwa6gLM4z_iBowmp-U_flItpwa3Igxal_Js" />
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PLGPQ8PJHF"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-PLGPQ8PJHF');
+    </script>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TBBGRXQT');</script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-          </head>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "federation-blue": "#003366",
+              "federation-red": "#da3532",
+            }
+          }
+        }
+      };
+    </script>
+
+    </head>
+
+<body class="bg-white text-slate-900 overflow-x-hidden w-full">
+    <div class="min-h-screen bg-white overflow-x-hidden">
+       <style>
       tailwind.config = {
         darkMode: "class",
         theme: {
