@@ -4,11 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     
-    <link rel="icon" href="favicon.png?v=2">
+    <link rel="icon" href="favicon.png?v=5">
     
     <title>Federación de Patinaje Gran Buenos Aires</title>
     <meta name="description" content="Sumate a la Federación Gran Buenos Aires. Mucho más que una institución, somos una comunidad dedicada a potenciar el patinaje." />
-    <meta name="google-site-verification" content="0YftTU65zwa6gLM4z_iBowmp-U_flItpwa3Igxal_Js" />
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-PLGPQ8PJHF"></script>
     <script>
@@ -17,11 +16,6 @@
       gtag('js', new Date());
       gtag('config', 'G-PLGPQ8PJHF');
     </script>
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-TBBGRXQT');</script>
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -31,9 +25,9 @@
           extend: {
             colors: {
               "federation-blue": "#003366",
-              "federation-red": "#da3532",
               "federation-green": "#5fb345",
               "federation-yellow": "#eae634",
+              "federation-red": "#da3532",
               "federation-celeste": "#34bce1",
             }
           }
@@ -42,45 +36,30 @@
     </script>
 
     <style>
-      /* ANTI-BAILE LATERAL */
-      html, body {
-        overflow-x: hidden;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        position: relative;
-      }
-
-      .portal-card { 
-        background: #ffffff; 
-        border-radius: 16px; 
-        border: 1px solid #eef2f6; 
-        height: 100%; 
-        transition: all 0.3s ease; 
-        display: flex;
-        flex-direction: column;
-      }
+      /* BLOQUEO DE MOVIMIENTO LATERAL */
+      html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; position: relative; }
+      
+      /* ESTILOS DE CARDS */
+      .portal-card { background: #ffffff; border-radius: 16px; border: 1px solid #eef2f6; height: 100%; transition: all 0.3s ease; display: flex; flex-direction: column; }
       .portal-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
       .p-header { height: 90px; display: flex; align-items: center; justify-content: center; color: white; border-radius: 16px 16px 0 0; }
       .p-body { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; text-align: center; }
       .p-title { font-size: 1.15rem; font-weight: 800; color: #003366; margin-bottom: 12px; text-transform: uppercase; }
-      .p-img-box { width: 100%; height: 130px; background: #f8fafc; border-radius: 12px; margin-bottom: 15px; display: flex; justify-content: center; align-items: center; overflow: hidden; }
+      .p-img-box { width: 100%; height: 130px; background: #f8fafc; border-radius: 12px; margin-bottom: 15px; display: flex; justify-content: center; align-items: center; overflow: hidden; border: 1px solid #f1f5f9; }
       .p-img-box img { max-width: 90%; max-height: 90%; object-fit: contain; }
       .p-btn { text-decoration: none; border-radius: 10px; padding: 10px; font-size: 13px; font-weight: 700; transition: all 0.2s ease; margin-bottom: 6px; display: flex; justify-content: center; }
     </style>
 </head>
 
-<body class="bg-white text-slate-900 overflow-x-hidden">
-  <div class="min-h-screen bg-white overflow-x-hidden">
+<body class="bg-white text-slate-900">
+  <div class="min-h-screen bg-white">
     
     <header class="bg-white shadow sticky top-0 z-50">
       <div class="container mx-auto px-4 md:px-6">
         <div class="flex items-center justify-between h-24 md:h-32">
-          
           <div class="h-20 md:h-28 flex items-center flex-shrink-0">
             <img src="./public/images/companies/logo.png" class="h-20 md:h-24 w-auto object-contain" alt="FGBA Logo" />
           </div>
-
           <nav class="hidden md:flex items-center gap-6">
             <a href="#inicio" class="text-[#003D7A] hover:text-[#00A9E0] transition-colors font-bold uppercase text-sm">Inicio</a>
             <a href="#informacion" class="text-[#003D7A] hover:text-[#00A9E0] transition-colors font-bold uppercase text-sm">Información</a>
@@ -89,19 +68,13 @@
             <a href="#institucion" class="text-[#003D7A] hover:text-[#00A9E0] transition-colors font-bold uppercase text-sm">Institución</a>
             <a href="#contacto" class="text-[#003D7A] hover:text-[#00A9E0] transition-colors font-bold uppercase text-sm">Contacto</a>
           </nav>
-
           <div class="md:hidden">
             <button id="mobile-menu-btn" class="p-2 text-[#003D7A] focus:outline-none">
-              <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="3" y1="12" x2="21" y2="12"></line>
-                <line x1="3" y1="6" x2="21" y2="6"></line>
-                <line x1="3" y1="18" x2="21" y2="18"></line>
-              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
             </button>
           </div>
         </div>
       </div>
-
       <nav id="mobile-menu" class="hidden flex-col bg-white border-t border-gray-100 md:hidden pb-4 shadow-inner">
         <a href="#inicio" class="mobile-link block px-6 py-4 text-[#003D7A] font-bold uppercase text-xs border-b border-gray-50">Inicio</a>
         <a href="#informacion" class="mobile-link block px-6 py-4 text-[#003D7A] font-bold uppercase text-xs border-b border-gray-50">Información</a>
@@ -113,29 +86,17 @@
     </header>
 
     <main class="w-full">
-      <section id="inicio" class="relative min-h-[500px] flex items-center justify-center overflow-hidden w-full"
-        style="background: linear-gradient(90deg, #b8d432 0%, #f9b233 15%, #f15a29 30%, #e94190 50%, #9b59b6 70%, #00a9e0 100%);">
+      <section id="inicio" class="relative min-h-[500px] flex items-center justify-center overflow-hidden" style="background: linear-gradient(90deg, #b8d432 0%, #f9b233 15%, #f15a29 30%, #e94190 50%, #9b59b6 70%, #00a9e0 100%);">
         <div class="container mx-auto px-6 py-24 text-center relative z-10">
-          <h1 class="text-3xl sm:text-5xl md:text-7xl font-black text-white mb-6 leading-tight drop-shadow-lg uppercase">
-            Federación de Patinaje<br />Gran Buenos Aires
-          </h1>
-          <p class="text-lg md:text-3xl text-white mb-10 font-normal drop-shadow-md">
-            Pasión, Disciplina y Excelencia sobre Ruedas
-          </p>
-          <button onclick="document.getElementById('informacion').scrollIntoView({ behavior: 'smooth' })"
-            class="bg-white text-[#003D7A] hover:bg-gray-100 text-base px-10 py-5 rounded-full font-bold shadow-xl transition-all h-auto cursor-pointer">
-            VER INFO
-          </button>
+          <h1 class="text-3xl sm:text-5xl md:text-7xl font-black text-white mb-8 leading-tight drop-shadow-lg uppercase">FEDERACIÓN DE PATINAJE<br />GRAN BUENOS AIRES</h1>
+          <p class="text-2xl md:text-3xl text-white mb-12 font-normal drop-shadow-md">Pasión, Disciplina y Excelencia sobre Ruedas</p>
+          <button onclick="document.getElementById('informacion').scrollIntoView({ behavior: 'smooth' })" class="bg-white text-[#003D7A] hover:bg-gray-100 text-base px-10 py-5 rounded-full font-bold shadow-xl transition-all">VER INFO</button>
         </div>
       </section>
 
-      <section id="informacion" class="py-16 md:py-24 bg-gray-50 overflow-hidden w-full border-b">
+      <section id="informacion" class="py-16 md:py-24 bg-gray-50 overflow-hidden">
         <div class="container mx-auto px-10 md:px-6 max-w-6xl">
-          <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-5xl font-bold text-[#003366] uppercase tracking-tight">Información 2026</h2>
-            <div class="w-16 h-1 bg-[#da3532] mx-auto mt-4 rounded-full"></div>
-          </div>
-
+          <div class="text-center mb-16"><h2 class="text-3xl md:text-5xl font-bold text-[#003366] uppercase tracking-tight">Información 2026</h2><div class="w-16 h-1 bg-[#da3532] mx-auto mt-4 rounded-full"></div></div>
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             <div class="portal-card">
               <div class="p-header bg-[#d32f2f]"><i data-lucide="book-open"></i></div>
@@ -144,7 +105,7 @@
                 <div class="mt-auto flex flex-col items-center">
                   <a href="https://drive.google.com/drive/folders/1DIhtuJstekYZJQ27tk4MZKi1cQm4cKRF" target="_blank" class="p-btn bg-[#d32f2f] text-white w-full uppercase">C.A.P</a>
                   <a href="https://drive.google.com/drive/folders/1BxoePixxSpgOw-x7JZViqkAm9HSOUqd1" target="_blank" class="p-btn bg-[#d32f2f] text-white w-full uppercase">WORLD SKATE</a>
-                  <a href="#" class="p-btn bg-[#d32f2f] text-white w-full uppercase text-[11px]">INTERNOS FGBA</a>
+                  <a href="https://drive.google.com/file/d/1Sfby3oJ3rIbGaUoq3AP0aLR9XOxB1Knq/view" target="_blank" class="p-btn bg-[#d32f2f] text-white w-full uppercase text-[11px]">INTERNOS FGBA</a>
                 </div>
               </div>
             </div>
@@ -153,7 +114,7 @@
               <div class="p-body">
                 <h3 class="p-title">Calendario</h3>
                 <div class="p-img-box"><img src="./public/images/design-mode/calendario2026.jpg" alt="Calendario"></div>
-                <a href="#" target="_blank" class="p-btn bg-[#fdd835] text-gray-800 w-full uppercase">VER CALENDARIO</a>
+                <a href="https://drive.google.com/file/d/1isdb5RsVK0wXMw4HLuCMVxIMWf2UaYp9/view" target="_blank" class="p-btn bg-[#fdd835] text-gray-800 w-full uppercase">VER CALENDARIO</a>
               </div>
             </div>
             <div class="portal-card">
@@ -161,7 +122,7 @@
               <div class="p-body">
                 <h3 class="p-title">Notas CAP</h3>
                 <div class="p-img-box"><img src="./public/images/companies/cap.jpeg" alt="Notas"></div>
-                <a href="#" target="_blank" class="p-btn bg-[#69b0d8] text-white w-full uppercase">VER NOTAS</a>
+                <a href="https://drive.google.com/drive/folders/1KHXmdDYLCcMz8LK_txDqsOrGaxrb1kOX" target="_blank" class="p-btn bg-[#69b0d8] text-white w-full uppercase">VER NOTAS</a>
               </div>
             </div>
             <div class="portal-card">
@@ -169,9 +130,9 @@
               <div class="p-body">
                 <h3 class="p-title">FGBA 2026</h3>
                 <div class="mt-auto flex flex-col items-center">
-                  <a href="#" class="p-btn bg-[#8bc34a] text-white w-full uppercase">Programas</a>
-                  <a href="#" class="p-btn bg-[#8bc34a] text-white w-full uppercase">Boletines</a>
-                  <a href="#" class="p-btn bg-[#8bc34a] text-white w-full uppercase">Estatuto</a>
+                  <a href="https://drive.google.com/drive/folders/1maPVIw3MO0WyikX9Hp5jQDqcWYN2KjjK" target="_blank" class="p-btn bg-[#8bc34a] text-white w-full uppercase">PROGRAMAS</a>
+                  <a href="https://drive.google.com/drive/folders/1tZXXa7mr5em9Ntci0xbmoa1QzMDeqeSG" target="_blank" class="p-btn bg-[#8bc34a] text-white w-full uppercase">BOLETINES</a>
+                  <a href="https://drive.google.com/drive/folders/1cuR-7GMp85Bi1O0xnXxrOrFPFxVf_YBN" target="_blank" class="p-btn bg-[#8bc34a] text-white w-full uppercase">ESTATUTO</a>
                 </div>
               </div>
             </div>
