@@ -48,6 +48,10 @@
       .p-img-box { width: 100%; height: 130px; background: #f8fafc; border-radius: 12px; margin-bottom: 15px; display: flex; justify-content: center; align-items: center; overflow: hidden; border: 1px solid #f1f5f9; }
       .p-img-box img { max-width: 90%; max-height: 90%; object-fit: contain; }
       .p-btn { text-decoration: none; border-radius: 10px; padding: 10px; font-size: 13px; font-weight: 700; transition: all 0.2s ease; margin-bottom: 6px; display: flex; justify-content: center; }
+/* Esto pone TODOS los títulos de sección en el azul oficial */
+h2 {
+  color: #003366 !important;
+}
     </style>
 </head>
 
@@ -94,51 +98,69 @@
         </div>
       </section>
 
-      <section id="informacion" class="py-16 md:py-24 bg-gray-50 overflow-hidden">
-        <div class="container mx-auto px-10 md:px-6 max-w-6xl">
-          <div class="text-center mb-16"><h2 class="text-3xl md:text-5xl font-bold text-[#003366] uppercase tracking-tight">Información 2026</h2><div class="w-16 h-1 bg-[#da3532] mx-auto mt-4 rounded-full"></div></div>
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div class="portal-card">
-              <div class="p-header bg-[#d32f2f]"><i data-lucide="book-open"></i></div>
-              <div class="p-body">
-                <h3 class="p-title">Reglamentos</h3>
-                <div class="mt-auto flex flex-col items-center">
-                  <a href="https://drive.google.com/drive/folders/1DIhtuJstekYZJQ27tk4MZKi1cQm4cKRF" target="_blank" class="p-btn bg-[#d32f2f] text-white w-full uppercase">C.A.P</a>
-                  <a href="https://drive.google.com/drive/folders/1BxoePixxSpgOw-x7JZViqkAm9HSOUqd1" target="_blank" class="p-btn bg-[#d32f2f] text-white w-full uppercase">WORLD SKATE</a>
-                  <a href="https://drive.google.com/file/d/1Sfby3oJ3rIbGaUoq3AP0aLR9XOxB1Knq/view" target="_blank" class="p-btn bg-[#d32f2f] text-white w-full uppercase text-[11px]">INTERNOS FGBA</a>
-                </div>
-              </div>
-            </div>
-            <div class="portal-card">
-              <div class="p-header bg-[#fdd835] text-gray-800"><i data-lucide="calendar"></i></div>
-              <div class="p-body">
-                <h3 class="p-title">Calendario</h3>
-                <div class="p-img-box"><img src="./public/images/design-mode/calendario2026.jpg" alt="Calendario"></div>
-                <a href="https://drive.google.com/file/d/1isdb5RsVK0wXMw4HLuCMVxIMWf2UaYp9/view" target="_blank" class="p-btn bg-[#fdd835] text-gray-800 w-full uppercase">VER CALENDARIO</a>
-              </div>
-            </div>
-            <div class="portal-card">
-              <div class="p-header bg-[#69b0d8] text-white"><i data-lucide="file-text"></i></div>
-              <div class="p-body">
-                <h3 class="p-title">Notas CAP</h3>
-                <div class="p-img-box"><img src="./public/images/companies/cap.jpeg" alt="Notas"></div>
-                <a href="https://drive.google.com/drive/folders/1KHXmdDYLCcMz8LK_txDqsOrGaxrb1kOX" target="_blank" class="p-btn bg-[#69b0d8] text-white w-full uppercase">VER NOTAS</a>
-              </div>
-            </div>
-            <div class="portal-card">
-              <div class="p-header bg-[#8bc34a] text-white"><i data-lucide="shield-check"></i></div>
-              <div class="p-body">
-                <h3 class="p-title">FGBA 2026</h3>
-                <div class="mt-auto flex flex-col items-center">
-                  <a href="https://drive.google.com/drive/folders/1maPVIw3MO0WyikX9Hp5jQDqcWYN2KjjK" target="_blank" class="p-btn bg-[#8bc34a] text-white w-full uppercase">PROGRAMAS</a>
-                  <a href="https://drive.google.com/drive/folders/1tZXXa7mr5em9Ntci0xbmoa1QzMDeqeSG" target="_blank" class="p-btn bg-[#8bc34a] text-white w-full uppercase">BOLETINES</a>
-                  <a href="https://drive.google.com/drive/folders/1cuR-7GMp85Bi1O0xnXxrOrFPFxVf_YBN" target="_blank" class="p-btn bg-[#8bc34a] text-white w-full uppercase">ESTATUTO</a>
-                </div>
-              </div>
-            </div>
+   <section id="informacion" class="py-16 md:py-24 bg-gray-50 overflow-hidden">
+  <div class="container mx-auto px-16 md:px-6 max-w-6xl">
+    
+   <div class="text-center mb-16">
+    <h2 class="text-3xl md:text-5xl font-bold text-[#003366] tracking-tight">
+        Información 2026
+    </h2>
+  </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      
+      <div class="portal-card">
+        <div class="p-header h-24 bg-[#d32f2f]">
+          <i data-lucide="book-open" class="w-10 h-12"></i>
+        </div>
+        <div class="p-body">
+          <h3 class="p-title">Reglamentos</h3>
+          <div class="mt-auto flex flex-col items-center text-center">
+            <a href="https://drive.google.com/drive/folders/1DIhtuJstekYZJQ27tk4MZKi1cQm4cKRF" target="_blank" class="p-btn bg-[#d32f2f] text-white w-[80%] uppercase">C.A.P</a>
+            <a href="https://drive.google.com/drive/folders/1BxoePixxSpgOw-x7JZViqkAm9HSOUqd1" target="_blank" class="p-btn bg-[#d32f2f] text-white w-[80%] uppercase">WORLD SKATE</a>
+            <a href="https://drive.google.com/file/d/1Sfby3oJ3rIbGaUoq3AP0aLR9XOxB1Knq/view" target="_blank" class="p-btn bg-[#d32f2f] text-white w-[80%] uppercase text-[11px]">INTERNOS FGBA</a>
           </div>
         </div>
-      </section>
+      </div>
+<div class="portal-card">
+  <div class="p-header h-24 bg-[#fdd835] text-white">
+    <i data-lucide="calendar" class="w-10 h-10"></i>
+  </div>
+  <div class="p-body flex flex-col items-center">
+    <h3 class="p-title text-center">Calendario</h3>
+    <div class="p-img-box"><img src="./public/images/design-mode/calendario2026.jpg" alt="Calendario"></div>
+    <a href="https://drive.google.com/file/d/1isdb5RsVK0wXMw4HLuCMVxIMWf2UaYp9/view" target="_blank" class="p-btn bg-[#fdd835] text-gray-800 w-[80%] mx-auto justify-center text-center">VER CALENDARIO</a>
+  </div>
+</div>
+
+<div class="portal-card">
+  <div class="p-header h-24 bg-[#69b0d8] text-white">
+    <i data-lucide="file-text" class="w-10 h-10"></i>
+  </div>
+  <div class="p-body flex flex-col items-center">
+    <h3 class="p-title text-center">Notas CAP</h3>
+    <div class="p-img-box"><img src="./public/images/companies/cap.jpeg" alt="Notas"></div>
+    <a href="https://drive.google.com/drive/folders/1KHXmdDYLCcMz8LK_txDqsOrGaxrb1kOX" target="_blank" class="p-btn bg-[#69b0d8] text-gray-800 w-[80%] mx-auto justify-center text-center">VER NOTAS</a>
+  </div>
+</div>
+
+      <div class="portal-card">
+        <div class="p-header h-24 bg-[#8bc34a] text-white">
+          <i data-lucide="shield-check" class="w-10 h-12"></i>
+        </div>
+        <div class="p-body">
+          <h3 class="p-title">FGBA 2026</h3>
+          <div class="mt-auto flex flex-col items-center text-center">
+            <a href="https://drive.google.com/drive/folders/1maPVIw3MO0WyikX9Hp5jQDqcWYN2KjjK" target="_blank" class="p-btn bg-[#8bc34a] text-white w-[80%] uppercase">PROGRAMAS</a>
+            <a href="https://drive.google.com/drive/folders/1tZXXa7mr5em9Ntci0xbmoa1QzMDeqeSG" target="_blank" class="p-btn bg-[#8bc34a] text-white w-[80%] uppercase">BOLETINES</a>
+            <a href="https://drive.google.com/drive/folders/1cuR-7GMp85Bi1O0xnXxrOrFPFxVf_YBN" target="_blank" class="p-btn bg-[#8bc34a] text-white w-[80%] uppercase">ESTATUTO</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
         <!-- Sección Deportes -->
         <section id="deportes" class="py-16 bg-white">
           <div class="container mx-auto px-4">
@@ -808,56 +830,67 @@
             </div>
           </div>
 </section>
-<section id="contacto" class="py-16 bg-white">
-  <div class="container mx-auto px-4">
-    <h2 class="text-4xl font-bold text-center mb-12 federation-blue">Contacto</h2>
+<section id="contacto" class="py-16 bg-white border-t">
+  <div class="container mx-auto px-4 max-w-6xl">
     
-    <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-      <div class="bg-white flex flex-col gap-6 rounded-xl border p-8 shadow-sm hover:shadow-md transition-shadow">
-        <h3 class="text-2xl font-bold mb-4 federation-blue">Sede Oficial</h3>
+    <h2 class="text-4xl font-bold text-center mb-12 text-[#003D7A]">Contacto</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+      
+      <div class="bg-white rounded-2xl border p-8 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
         
-        <div class="space-y-6">
-          <div class="flex items-start gap-4 text-left">
-            <span class="text-2xl">📍</span>
-            <div>
-              <p class="font-semibold text-base mb-1">Dirección</p>
-              <p class="text-gray-600 text-sm">Ombú 3334, San Justo. Buenos Aires 🇦🇷</p>
-            </div>
-          </div>
+        <div>
+          <h3 class="text-2xl font-bold mb-8 text-[#003D7A]">Sede Oficial</h3>
           
-          <div class="flex items-start gap-4 text-left">
-            <span class="text-2xl">📧</span>
-            <div>
-              <p class="font-semibold text-base mb-1">Email</p>
-              <p class="text-gray-600 text-sm">fgba.prensa@gmail.com</p>
+          <div class="space-y-8">
+            <div class="flex items-center gap-4 text-left">
+              <span class="text-3xl w-12 flex justify-center">📍</span>
+              <div>
+                <p class="font-bold text-[#003D7A] text-lg leading-none mb-1">Dirección</p>
+                <p class="text-gray-600 text-sm">Ombú 3334, San Justo. Buenos Aires 🇦🇷</p>
+              </div>
             </div>
-          </div>
-          
-          <div class="flex items-start gap-4 text-left">
-            <span class="text-2xl">📞</span>
-            <div>
-              <p class="font-semibold text-base mb-1">Teléfono</p>
-              <p class="text-gray-600 text-sm">+54 11 5478-0320</p>
+            
+            <div class="flex items-center gap-4 text-left">
+              <span class="text-3xl w-12 flex justify-center">📧</span>
+              <div>
+                <p class="font-bold text-[#003D7A] text-lg leading-none mb-1">Email</p>
+                <p class="text-gray-600 text-sm">fgba.prensa@gmail.com</p>
+              </div>
+            </div>
+            
+            <div class="flex items-center gap-4 text-left">
+              <span class="w-12 flex justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#25D366" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/>
+                </svg>
+              </span>
+              <div>
+                <p class="font-bold text-[#003D7A] text-lg leading-none mb-1">WhatsApp</p>
+                <a href="https://wa.me/541154780320" target="_blank" class="text-gray-600 text-sm hover:text-[#25D366] transition-colors font-medium">
+                  +54 11 5478-0320
+                </a>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="mt-6 pt-6 border-t border-gray-100">
-                <h3 class="text-2xl font-bold mb-4 federation-blue">¡Seguinos en Redes Sociales!</h3>
-          <div class="flex gap-4">
-            <a href="https://www.facebook.com/share/1SciZ5j7q8/" class="w-12 h-12 bg-federation-blue rounded-full flex items-center justify-center text-white hover:opacity-80 transition-opacity" aria-label="Facebook">
-              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+        <div class="mt-10 pt-8 border-t border-gray-100">
+          <h3 class="text-xl font-bold mb-5 text-[#003D7A]">¡Seguinos en Redes Sociales!</h3>
+          <div class="flex gap-5">
+            <a href="https://www.facebook.com/share/1SciZ5j7q8/" target="_blank" class="w-12 h-12 bg-[#003D7A] rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform shadow-sm" aria-label="Facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
             </a>
-            <a href="https://www.instagram.com/fed.gran.bs.as?igsh=YjF5d3BxdDA3enJw" class="w-12 h-12 bg-federation-red rounded-full flex items-center justify-center text-white hover:opacity-80 transition-opacity" aria-label="Instagram">
-              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            <a href="https://www.instagram.com/fed.gran.bs.as?igsh=YjF5d3BxdDA3enJw" target="_blank" class="w-12 h-12 bg-[#da3532] rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform shadow-sm" aria-label="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
             </a>
           </div>
         </div>
       </div>
 
-      <div class="h-[400px] md:h-full min-h-[350px] rounded-xl overflow-hidden border shadow-sm">
+      <div class="h-[450px] md:h-full min-h-[400px] rounded-2xl overflow-hidden border shadow-sm">
         <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.3315777478044!2d-58.5564883!3d-34.6715697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc633005a3967%3A0xc3d3a0172467d5e4!2zT21iw7ogMzMzNCwgQjE3NTQgU2FuIEp1c3RvLCBQcm92aW5jaWEgZGUgQnVlbm9zIEFpcmVz!5e0!3m2!1ses-419!2sar!4v1710000000000!5m2!1ses-419!2sar" 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.042852233083!2d-58.5574564!3d-34.6788229!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc6333630f55d%3A0xe212574061807469!2zT21iw7ogMzMzNCwgQjE3NTQgU2FuIEp1c3RvLCBQcm92aW5jaWEgZGUgQnVlbm9zIEFpcmVz!5e0!3m2!1ses!2sar!4v1710000000000!5m2!1ses!2sar" 
           width="100%" 
           height="100%" 
           style="border:0;" 
@@ -865,8 +898,10 @@
           loading="lazy">
         </iframe>
       </div>
+
     </div>
   </div>
+</section>
 <div class="text-center mb-12 mt-24">
   <h2 class="text-4xl font-bold text-[#003D7A] uppercase tracking-tight">SPONSORS 2026</h2>
   <div class="w-16 h-1 bg-[#da3532] mx-auto mt-3"></div>
@@ -964,19 +999,27 @@
 </footer>
 
 <script>
-  document.getElementById('year-final').textContent = new Date().getFullYear();
-</script>
+    // 1. ESTO ACTIVA LOS ICONOS (Vital)
+    lucide.createIcons();
 
-  <script>
+    // 2. AÑO AUTOMÁTICO
     const spanAnio = document.getElementById("year-final");
-    if (spanAnio) {
-      spanAnio.textContent = new Date().getFullYear();
-    }
+    if (spanAnio) { spanAnio.textContent = new Date().getFullYear(); }
+
+    // 3. MENÚ MOBILE
     const btnMovil = document.getElementById("mobile-menu-btn");
     const menuMovil = document.getElementById("mobile-menu");
+    const links = document.querySelectorAll(".mobile-link");
+
     if (btnMovil && menuMovil) {
-      btnMovil.addEventListener("click", () => {
+      btnMovil.onclick = () => {
         menuMovil.classList.toggle("hidden");
+        menuMovil.classList.toggle("flex");
+      };
+      // Cerrar al clickear link
+      links.forEach(l => l.onclick = () => {
+        menuMovil.classList.add("hidden");
+        menuMovil.classList.remove("flex");
       });
     }
   </script>
