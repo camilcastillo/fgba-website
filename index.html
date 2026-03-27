@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
   <head>
+</head>
+<body class="bg-white text-slate-900 overflow-x-hidden w-full">
+  <div class="min-h-screen bg-white overflow-x-hidden">
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-PLGPQ8PJHF"></script>
 <script>
@@ -330,104 +333,44 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }
     </style>
   </head>
-  <body class="bg-background text-foreground">
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TBBGRXQT"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "SportsOrganization",
-        "name": "Federación de Patinaje Gran Buenos Aires",
-        "description": "Federación oficial de patinaje artístico de Gran Buenos Aires con más de 100 clubes afiliados",
-        "url": "https://federacionpatinajegba.com",
-        "logo": "https://federacionpatinajegba.com/logo-federacion.png",
-        "sameAs": [
-          "https://www.facebook.com/federacionpatinajegba",
-          "https://www.instagram.com/federacionpatinajegba"
-        ],
-        "address": {
-          "@type": "PostalAddress",
-          "addressCountry": "AR",
-          "addressRegion": "Buenos Aires"
-        },
-        "sport": "Patinaje Artístico"
-      }
-    </script>
+ <header class="bg-white shadow sticky top-0 z-50">
+  <div class="container mx-auto px-6">
+    <div class="flex items-center justify-between min-h-20">
+      
+      <div class="h-20 flex items-center">
+        <img src="./public/images/companies/logo.png" class="h-16 w-auto object-contain" alt="FGBA Logo" />
+      </div>
 
-    <div class="min-h-screen bg-white">
-      <header class="bg-white shadow top-0 z-50">
-        <div class="container mx-auto px-6">
-          <div class="flex items-center justify-between min-h-20">
-            <!-- Logo -->
-            <div class="h-32 flex items-center justify-center">
-              <img
-                src="./public/images/companies/logo.png"
-                width="200"
-                height="200"
-                alt="logo"
-              />
-            </div>
-            <nav class="hidden md:flex items-center gap-10">
-  <a href="#inicio" class="text-[#003D7A] hover:text-[#00A9E0] transition-colors font-semibold text-base">
-    Inicio
-  </a>
-  
-  <a href="#informacion" class="text-[#003D7A] hover:text-[#00A9E0] transition-colors font-semibold text-base">
-    Información
-  </a>
+      <nav class="hidden md:flex items-center gap-8">
+        <a href="#inicio" class="text-[#003D7A] hover:text-[#00A9E0] transition-colors font-bold uppercase text-sm">Inicio</a>
+        <a href="#informacion" class="text-[#003D7A] hover:text-[#da3532] transition-colors font-bold uppercase text-sm">Información</a>
+        <a href="#deportes" class="text-[#003D7A] hover:text-[#00A9E0] transition-colors font-bold uppercase text-sm">Deportes</a>
+        <a href="#novedades" class="text-[#003D7A] hover:text-[#00A9E0] transition-colors font-bold uppercase text-sm">Novedades</a>
+        <a href="#institucion" class="text-[#003D7A] hover:text-[#00A9E0] transition-colors font-bold uppercase text-sm">Institución</a>
+        <a href="#contacto" class="text-[#003D7A] hover:text-[#00A9E0] transition-colors font-bold uppercase text-sm">Contacto</a>
+      </nav>
 
-  <a href="#deportes" class="text-[#003D7A] hover:text-[#00A9E0] transition-colors font-semibold text-base">
-    Deportes
-  </a>
+      <div class="md:hidden">
+        <button id="mobile-menu-btn" class="p-2 text-[#003D7A] focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
 
-  <a href="#novedades" class="text-[#003D7A] hover:text-[#00A9E0] transition-colors font-semibold text-base">
-    Novedades
-  </a>
-
-  <a href="#institucion" class="text-[#003D7A] hover:text-[#00A9E0] transition-colors font-semibold text-base">
-    Institución
-  </a>
-
-  <a href="#contacto" class="text-[#003D7A] hover:text-[#00A9E0] transition-colors font-semibold text-base">
-    Contacto
-  </a>
-</nav><nav
-  id="mobile-menu"
-  class="hidden md:hidden pb-4 border-t border-gray-200 mt-2"
->
-  <a
-    href="#inicio"
-    class="mobile-link block px-4 py-3 text-[#003D7A] hover:bg-gray-50 font-semibold"
-    >Inicio</a
-  >
-  
-  <a 
-    href="#informacion" 
-    class="mobile-link block px-4 py-3 text-[#003D7A] hover:bg-gray-50 font-semibold"
-    >Información</a
-  >
-
-  <a
-    href="#institucion"
-    class="mobile-link block px-4 py-3 text-[#003D7A] hover:bg-gray-50 font-semibold"
-    >Institución</a
-  >
-  
-  <a
-    href="#novedades"
-    class="mobile-link block px-4 py-3 text-[#003D7A] hover:bg-gray-50 font-semibold"
-    >Novedades</a
-  >
-  
-  <a
-    href="#contacto"
-    class="mobile-link block px-4 py-3 text-[#003D7A] hover:bg-gray-50 font-semibold"
-    >Contacto</a
-  >
-</nav>
-        </div>
-      </header>
-
+    <nav id="mobile-menu" class="hidden flex-col bg-white border-t border-gray-100 md:hidden pb-4 shadow-inner">
+      <a href="#inicio" class="mobile-link block px-6 py-4 text-[#003D7A] hover:bg-gray-50 font-bold uppercase text-xs">Inicio</a>
+      <a href="#informacion" class="mobile-link block px-6 py-4 text-[#003D7A] hover:bg-gray-50 font-bold uppercase text-xs">Información</a>
+      <a href="#deportes" class="mobile-link block px-6 py-4 text-[#003D7A] hover:bg-gray-50 font-bold uppercase text-xs">Deportes</a>
+      <a href="#novedades" class="mobile-link block px-6 py-4 text-[#003D7A] hover:bg-gray-50 font-bold uppercase text-xs">Novedades</a>
+      <a href="#institucion" class="mobile-link block px-6 py-4 text-[#003D7A] hover:bg-gray-50 font-bold uppercase text-xs">Institución</a>
+      <a href="#contacto" class="mobile-link block px-6 py-4 text-[#003D7A] hover:bg-gray-50 font-bold uppercase text-xs">Contacto</a>
+    </nav>
+  </div>
+</header>
       <main>
         <section
           id="inicio"
@@ -446,7 +389,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         >
           <div class="container mx-auto px-6 py-24 text-center relative z-10">
             <h1
-              class="text-5xl md:text-7xl lg:text-7xl font-black text-white mb-8 leading-tight tracking-tight drop-shadow-lg"
+              class="text-4xl md:text-7xl lg:text-7xl font-black text-white mb-8 leading-tight tracking-tight drop-shadow-lg"
             >
               FEDERACIÓN DE PATINAJE
               <br />
@@ -482,7 +425,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </button>
           </div>
         </section>
-       <section id="informacion" class="py-20 bg-gray-50">
+   <section id="informacion" class="py-20 bg-gray-50">
   <div class="container mx-auto px-12 md:px-4 max-w-6xl">
 
     <div class="text-center mb-12">
@@ -1382,23 +1325,38 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </footer>
 
+<script src="https://unpkg.com/lucide@latest"></script>
+
 <script>
-  document.getElementById('year-final').textContent = new Date().getFullYear();
+  // Inicializar los iconos de Lucide
+  lucide.createIcons();
+
+  // Lógica del Menú Móvil
+  const menuBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const navLinks = document.querySelectorAll('.mobile-link');
+
+  if (menuBtn && mobileMenu) {
+    // Abrir y cerrar
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      mobileMenu.classList.toggle('flex');
+    });
+
+    // Cerrar al tocar un link
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        mobileMenu.classList.remove('flex');
+      });
+    });
+  }
+  // Lógica del Año Automático (con seguridad por si no existe el ID)
+  const spanAnio = document.getElementById("year-final");
+  if (spanAnio) {
+    spanAnio.textContent = new Date().getFullYear();
+  }
 </script>
 
-  <script>
-    const spanAnio = document.getElementById("year-final");
-    if (spanAnio) {
-      spanAnio.textContent = new Date().getFullYear();
-    }
-    const btnMovil = document.getElementById("mobile-menu-btn");
-    const menuMovil = document.getElementById("mobile-menu");
-    if (btnMovil && menuMovil) {
-      btnMovil.addEventListener("click", () => {
-        menuMovil.classList.toggle("hidden");
-<script src="https://unpkg.com/lucide@latest"></script>
-<script>
-  lucide.createIcons();
-  </script>
 </body>
 </html>
