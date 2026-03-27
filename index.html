@@ -378,16 +378,62 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 />
               </svg>
             </div>
+       <button onclick="document.getElementById('informacion').scrollIntoView({ behavior: 'smooth' })"
+            class="bg-white text-[#003D7A] hover:bg-gray-100 text-base px-10 py-5 rounded-full font-bold shadow-xl transition-all h-auto cursor-pointer">
+            VER INFO
+          </button>
+        </div>
+      </section>
 
-            <button
-              onclick="document.getElementById('institucion').scrollIntoView({ behavior: 'smooth' })"
-              class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive cursor-pointer bg-white text-[#003D7A] hover:bg-gray-100 text-base px-10 py-6 rounded-full font-bold shadow-xl hover:shadow-2xl h-auto"
-            >
-              Conocé Nuestra Institución
-            </button>
+      <section id="informacion" class="py-16 md:py-24 bg-gray-50 overflow-hidden w-full border-b">
+        <div class="container mx-auto px-10 md:px-6 max-w-6xl">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-5xl font-bold text-[#003366] uppercase tracking-tight">Información 2026</h2>
+            <div class="w-16 h-1 bg-[#da3532] mx-auto mt-4 rounded-full"></div>
           </div>
-        </section>
 
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="portal-card">
+              <div class="p-header bg-[#d32f2f]"><i data-lucide="book-open"></i></div>
+              <div class="p-body">
+                <h3 class="p-title">Reglamentos</h3>
+                <div class="mt-auto flex flex-col items-center">
+                  <a href="https://drive.google.com/drive/folders/1DIhtuJstekYZJQ27tk4MZKi1cQm4cKRF" target="_blank" class="p-btn bg-[#d32f2f] text-white w-full uppercase">C.A.P</a>
+                  <a href="https://drive.google.com/drive/folders/1BxoePixxSpgOw-x7JZViqkAm9HSOUqd1" target="_blank" class="p-btn bg-[#d32f2f] text-white w-full uppercase">WORLD SKATE</a>
+                  <a href="#" class="p-btn bg-[#d32f2f] text-white w-full uppercase text-[11px]">INTERNOS FGBA</a>
+                </div>
+              </div>
+            </div>
+            <div class="portal-card">
+              <div class="p-header bg-[#fdd835] text-gray-800"><i data-lucide="calendar"></i></div>
+              <div class="p-body">
+                <h3 class="p-title">Calendario</h3>
+                <div class="p-img-box"><img src="./public/images/design-mode/calendario2026.jpg" alt="Calendario"></div>
+                <a href="#" target="_blank" class="p-btn bg-[#fdd835] text-gray-800 w-full uppercase">VER CALENDARIO</a>
+              </div>
+            </div>
+            <div class="portal-card">
+              <div class="p-header bg-[#69b0d8] text-white"><i data-lucide="file-text"></i></div>
+              <div class="p-body">
+                <h3 class="p-title">Notas CAP</h3>
+                <div class="p-img-box"><img src="./public/images/companies/cap.jpeg" alt="Notas"></div>
+                <a href="#" target="_blank" class="p-btn bg-[#69b0d8] text-white w-full uppercase">VER NOTAS</a>
+              </div>
+            </div>
+            <div class="portal-card">
+              <div class="p-header bg-[#8bc34a] text-white"><i data-lucide="shield-check"></i></div>
+              <div class="p-body">
+                <h3 class="p-title">FGBA 2026</h3>
+                <div class="mt-auto flex flex-col items-center">
+                  <a href="#" class="p-btn bg-[#8bc34a] text-white w-full uppercase">Programas</a>
+                  <a href="#" class="p-btn bg-[#8bc34a] text-white w-full uppercase">Boletines</a>
+                  <a href="#" class="p-btn bg-[#8bc34a] text-white w-full uppercase">Estatuto</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
         <!-- Sección Deportes -->
         <section id="deportes" class="py-16 bg-white">
           <div class="container mx-auto px-4">
@@ -1056,166 +1102,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               </div>
             </div>
           </div>
-        </section>
-<section class="py-16 bg-white">
-  <div class="container mx-auto px-4">
-    <h2 class="text-4xl md:text-5xl font-bold text-center mb-6 federation-red">
-    <section id="reglamentos2026" class="py-20 bg-gray-50">
-  <div class="container mx-auto px-4">
-    
-    <div class="text-center mb-12">
-      <h2 class="text-4xl font-bold text-[#003D7A] uppercase tracking-tight">Reglamentos 2026</h2>
-      <div class="w-16 h-1 bg-[#da3532] mx-auto mt-3"></div>
-    </div>
-      
-    <div class="max-w-md mx-auto"> 
-      <div class="bg-white rounded-2xl border shadow-sm overflow-hidden hover:shadow-2xl transition-all duration-300 h-full">
-        
-        <div class="relative h-64 bg-gray-100 flex items-center justify-center p-4">
-          <img src="./public/images/design-mode/reglamentos2026.png" alt="Reglamentos 2026" class="object-contain w-full h-full" />
-        </div>
-
-        <div class="px-8 pb-10">
-          <div class="flex flex-col items-center gap-4 mt-6">
-            
-            <style>
-              .btn-reg {
-                display: inline-flex;
-                align-items: center;
-                justify-content: center;
-                width: 100%;
-                color: #003D7A !important;
-                padding: 18px 20px;
-                font-size: 13px;
-                font-weight: 900;
-                text-transform: uppercase;
-                text-decoration: none;
-                letter-spacing: 1.5px;
-                border: none;
-                transition: all 0.3s ease;
-                cursor: pointer;
-                border-radius: 8px; /* Un poco de redondeo para que sea moderno */
-                text-align: center;
-              }
-
-              .btn-cap { background-color: #00a9e0; }
-              .btn-cap:hover { 
-                background-color: #0088b5; 
-                transform: translateY(-3px);
-                box-shadow: 0 6px 20px rgba(0, 169, 224, 0.3);
-              }
-
-              .btn-world { background-color: #8cc63f; }
-              .btn-world:hover { 
-                background-color: #7ab32f; 
-                transform: translateY(-3px);
-                box-shadow: 0 6px 20px rgba(140, 198, 63, 0.3);
-              }
-
-             .btn-fgba { background-color: #eae634; color: #003366 !important; }
-             .btn-fgba:hover { 
-              background-color: #d4d02f; 
-               transform: translateY(-3px);
-               box-shadow: 0 6px 20px rgba(234, 230, 52, 0.4);
-              }
-            </style>
-
-            <a href="https://drive.google.com/drive/folders/1DIhtuJstekYZJQ27tk4MZKi1cQm4cKRF?usp=sharing" target="_blank" class="btn-reg btn-cap">
-              REGLAMENTOS C.A.P 2026
-            </a>
-
-            <a href="https://drive.google.com/drive/folders/1BxoePixxSpgOw-x7JZViqkAm9HSOUqd1?usp=sharing" target="_blank" class="btn-reg btn-world">
-               REGLAMENTOS WORLD SKATE 2026
-            </a>
-            <a href="https://drive.google.com/file/d/1Sfby3oJ3rIbGaUoq3AP0aLR9XOxB1Knq/view?usp=sharing" target="_blank" class="btn-reg btn-fgba">
-               REGLAMENTOS INTERNOS FGBA
-            </a>
-          </div>
-        </div> 
-      </div> 
-    </div> 
-  </div> 
-</section> 
-      <section id="calendario2026" class="py-20 bg-white">
-  <div class="container mx-auto px-4">
-    <div class="text-center mb-12">
-      <h2 class="text-4xl font-bold text-[#003D7A] uppercase tracking-tight">Calendario 2026</h2>
-      <div class="w-16 h-1 bg-[#da3532] mx-auto mt-3"></div>
-    </div>
-    <div class="max-w-md mx-auto"> 
-      <div class="bg-white rounded-2xl border shadow-sm overflow-hidden hover:shadow-2xl transition-all duration-300 h-full">
-        <div class="relative h-64 bg-gray-100 flex items-center justify-center p-4">
-          <img src="./public/images/design-mode/calendario2026.jpg" alt="Calendario Oficial 2026" class="object-contain w-full h-full" />
-        </div>
-        <div class="px-8 pb-10">
-          <div class="flex flex-col items-center gap-4 mt-6">
-            <a href="https://drive.google.com/file/d/1isdb5RsVK0wXMw4HLuCMVxIMWf2UaYp9/view?usp=sharing" target="_blank" class="btn-reg btn-fgba">
-                CALENDARIO 2026
-            </a>
-          </div>
-        </div> 
-      </div> 
-    </div> 
-  </div> 
-</section>
-<section id="notascap2026" class="py-20 bg-gray-50">
-  <div class="container mx-auto px-4">
-    <div class="text-center mb-12">
-      <h2 class="text-4xl font-bold text-[#003D7A] uppercase tracking-tight">NOTAS CAP 2026</h2>
-      <div class="w-16 h-1 bg-[#da3532] mx-auto mt-3"></div>
-    </div>
-    <div class="max-w-md mx-auto"> 
-      <div class="bg-white rounded-2xl border shadow-sm overflow-hidden hover:shadow-2xl transition-all duration-300 h-full">
-        <div class="relative h-64 bg-gray-100 flex items-center justify-center p-4">
-          <img src="./public/images/design-mode/notascap.png" alt="Notas C.A.P 2026" class="object-contain w-full h-full" />
-        </div>
-        <div class="px-8 pb-10">
-          <div class="flex flex-col items-center gap-4 mt-6">
-            <a href="https://drive.google.com/drive/folders/1KHXmdDYLCcMz8LK_txDqsOrGaxrb1kOX?usp=sharing" target="_blank" class="btn-reg btn-fgba">
-                NOTAS CAP 2026
-            </a>
-          </div>
-        </div> 
-      </div> 
-    </div> 
-  </div> 
-</section>
-  <section id="fgba2026" class="py-20 bg-white">
-  <div class="container mx-auto px-4">
-    <div class="text-center mb-12">
-      <h2 class="text-4xl font-bold text-[#003D7A] uppercase tracking-tight">FGBA 2026</h2>
-      <div class="w-16 h-1 bg-[#da3532] mx-auto mt-3"></div>
-    </div>
-    <div class="max-w-md mx-auto"> 
-      <div class="bg-white rounded-2xl border shadow-sm overflow-hidden hover:shadow-2xl transition-all duration-300 h-full">
-        <div class="relative h-64 bg-gray-100 flex items-center justify-center p-4">
-          <img src="./public/images/companies/logo.png" alt="FGBA 2026" class="object-contain w-full h-full" />
-        </div>
-        <div class="px-8 pb-10">
-  <div class="flex flex-col items-center gap-4 mt-6">
-    <a href="https://drive.google.com/drive/folders/1tZXXa7mr5em9Ntci0xbmoa1QzMDeqeSG?usp=sharing" 
-       target="_blank" 
-       class="btn-reg btn-fgba" 
-       style="background-color: #d4d02f !important; color: #003D7A !important;">
-        Boletines
-    </a>
-    <a href="https://drive.google.com/drive/folders/1maPVIw3MO0WyikX9Hp5jQDqcWYN2KjjK?usp=sharing" 
-       target="_blank" 
-       class="btn-reg btn-fgba" 
-       style="background-color: #8cc63f !important; color: #003D7A !important;">
-        Programaciones Oficiales
-     </a>
-    <a href="https://drive.google.com/drive/folders/1cuR-7GMp85Bi1O0xnXxrOrFPFxVf_YBN" 
-       target="_blank" 
-       class="btn-reg btn-fgba" 
-       style="background-color: #00a9e0 !important; color: #003D7A !important;">
-        Estatuto
-    </a>
-        </div>
-       </div>
-      </div> 
-    </div> 
-  </div> 
 </section>
 <section id="contacto" class="py-16 bg-white">
   <div class="container mx-auto px-4">
