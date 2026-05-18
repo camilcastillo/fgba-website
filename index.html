@@ -1,20 +1,38 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es" class="scroll-smooth">
-<head>
+  <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    
-    <link rel="icon" href="favicon.png?v=5">
-    
-    <title>Federación de Patinaje Gran Buenos Aires</title>
-    <meta name="description" content="Sumate a la Federación Gran Buenos Aires. Mucho más que una institución, somos una comunidad dedicada a potenciar el patinaje." />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PLGPQ8PJHF"></script>
+    <link rel="icon" href="favicon.png?v=5" />
+
+    <title>Federación de Patinaje Gran Buenos Aires</title>
+    <meta
+      name="description"
+      content="Sumate a la Federación Gran Buenos Aires. Mucho más que una institución, somos una comunidad dedicada a potenciar el patinaje."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-PLGPQ8PJHF"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-PLGPQ8PJHF');
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-PLGPQ8PJHF");
     </script>
 
     <script src="https://cdn.tailwindcss.com"></script>
@@ -23,150 +41,412 @@
       tailwind.config = {
         theme: {
           extend: {
+            fontFamily: {
+              sans: ["Montserrat", "sans-serif"],
+            },
             colors: {
               "federation-blue": "#003366",
               "federation-green": "#5fb345",
               "federation-yellow": "#eae634",
               "federation-red": "#da3532",
               "federation-celeste": "#34bce1",
-            }
-          }
-        }
+            },
+            keyframes: {
+              fadeIn: {
+                "0%": { opacity: "0" },
+                "100%": { opacity: "1" },
+              },
+              slideUp: {
+                "0%": { opacity: "0", transform: "translateY(20px)" },
+                "100%": { opacity: "1", transform: "translateY(0)" },
+              },
+            },
+            animation: {
+              fadeIn: "fadeIn 1s ease-out forwards",
+              slideUp: "slideUp 0.8s ease-out forwards",
+            },
+          },
+        },
       };
     </script>
 
     <style>
       /* BLOQUEO DE MOVIMIENTO LATERAL */
-      html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; position: relative; }
-      
-      /* ESTILOS DE CARDS */
-      .portal-card { background: #ffffff; border-radius: 16px; border: 1px solid #eef2f6; height: 100%; transition: all 0.3s ease; display: flex; flex-direction: column; }
-      .portal-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
-      .p-header { height: 90px; display: flex; align-items: center; justify-content: center; color: white; border-radius: 16px 16px 0 0; }
-      .p-body { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; text-align: center; }
-      .p-title { font-size: 1.15rem; font-weight: 800; color: #003366; margin-bottom: 12px; text-transform: uppercase; }
-      .p-img-box { width: 100%; height: 130px; background: #f8fafc; border-radius: 12px; margin-bottom: 15px; display: flex; justify-content: center; align-items: center; overflow: hidden; border: 1px solid #f1f5f9; }
-      .p-img-box img { max-width: 90%; max-height: 90%; object-fit: contain; }
-      .p-btn { text-decoration: none; border-radius: 10px; padding: 10px; font-size: 13px; font-weight: 700; transition: all 0.2s ease; margin-bottom: 6px; display: flex; justify-content: center; }
-/* Esto pone TODOS los títulos de sección en el azul oficial */
-h2 {
-  color: #003366 !important;
-}
-    </style>
-</head>
+      html,
+      body {
+        overflow-x: hidden;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        position: relative;
+      }
 
-<body class="bg-white text-slate-900">
-  <div class="min-h-screen bg-white">
-      
-<header class="bg-white shadow sticky top-0 z-50">
-  <div class="container mx-auto px-4 md:px-6">
-    <div class="flex items-center justify-between h-32 md:h-40">
-      
-      <div class="h-28 md:h-36 flex items-center flex-shrink-0">
-        
-        <img src="./public/images/companies/logo.png" 
-             class="h-28 md:h-36 w-auto object-contain" 
-             alt="FGBA Logo" />
-             
-      </div>
-          <nav class="hidden md:flex items-center gap-6">
-            <a href="#inicio" class="text-[#003D7A] hover:text-[#00A9E0] transition-colors font-bold uppercase text-sm">Inicio</a>
-            <a href="#informacion" class="text-[#003D7A] hover:text-[#00A9E0] transition-colors font-bold uppercase text-sm">Información</a>
-            <a href="#deportes" class="text-[#003D7A] hover:text-[#00A9E0] transition-colors font-bold uppercase text-sm">Deportes</a>
-            <a href="#novedades" class="text-[#003D7A] hover:text-[#00A9E0] transition-colors font-bold uppercase text-sm">Novedades</a>
-            <a href="#institucion" class="text-[#003D7A] hover:text-[#00A9E0] transition-colors font-bold uppercase text-sm">Institución</a>
-            <a href="#contacto" class="text-[#003D7A] hover:text-[#00A9E0] transition-colors font-bold uppercase text-sm">Contacto</a>
-          </nav>
-          <div class="md:hidden">
-            <button id="mobile-menu-btn" class="p-2 text-[#003D7A] focus:outline-none">
-              <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      /* ESTILOS DE CARDS */
+      .portal-card {
+        background: #ffffff;
+        border-radius: 20px;
+        border: 1px solid #e2e8f0;
+        height: 100%;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        box-shadow:
+          0 4px 6px -1px rgba(0, 0, 0, 0.05),
+          0 2px 4px -1px rgba(0, 0, 0, 0.03);
+      }
+      .portal-card:hover {
+        transform: translateY(-8px);
+        box-shadow:
+          0 20px 25px -5px rgba(0, 0, 0, 0.1),
+          0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        border-color: #003d7a;
+      }
+      .p-header {
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        background: linear-gradient(135deg, #003d7a, #002244);
+      }
+      .p-body {
+        padding: 28px 24px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+      }
+      .p-title {
+        font-size: 1.25rem;
+        font-weight: 800;
+        color: #002244;
+        margin-bottom: 16px;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+      .p-img-box {
+        width: 100%;
+        height: 140px;
+        background: #f8fafc;
+        border-radius: 16px;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        border: 1px solid #e2e8f0;
+      }
+      .p-img-box img {
+        max-width: 85%;
+        max-height: 85%;
+        object-fit: contain;
+      }
+      .p-btn {
+        text-decoration: none;
+        border-radius: 12px;
+        padding: 12px 16px;
+        font-size: 14px;
+        font-weight: 700;
+        transition: all 0.3s ease;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        letter-spacing: 0.025em;
+      }
+      .p-btn:hover {
+        transform: scale(1.02);
+      }
+      /* Esto pone TODOS los títulos de sección en el azul oficial */
+      h2 {
+        color: #003366 !important;
+      }
+    </style>
+  </head>
+
+  <body class="bg-white text-slate-900">
+    <div class="min-h-screen bg-white">
+      <header class="bg-white shadow sticky top-0 z-50">
+        <div class="container mx-auto px-4 md:px-6">
+          <div class="flex items-center justify-between h-20 md:h-40">
+            <div class="h-16 md:h-36 flex items-center flex-shrink-0">
+              <img
+                src="./public/images/companies/logo.png"
+                class="h-16 md:h-36 w-auto object-contain"
+                alt="FGBA Logo"
+              />
+            </div>
+            <nav class="hidden md:flex items-center gap-6">
+              <a
+                href="#inicio"
+                class="text-[#003D7A] hover:text-[#00A9E0] transition-colors font-bold uppercase text-sm"
+                >Inicio</a
+              >
+              <a
+                href="#informacion"
+                class="text-[#003D7A] hover:text-[#00A9E0] transition-colors font-bold uppercase text-sm"
+                >Información</a
+              >
+              <a
+                href="#deportes"
+                class="text-[#003D7A] hover:text-[#00A9E0] transition-colors font-bold uppercase text-sm"
+                >Deportes</a
+              >
+              <a
+                href="#novedades"
+                class="text-[#003D7A] hover:text-[#00A9E0] transition-colors font-bold uppercase text-sm"
+                >Novedades</a
+              >
+              <a
+                href="#institucion"
+                class="text-[#003D7A] hover:text-[#00A9E0] transition-colors font-bold uppercase text-sm"
+                >Institución</a
+              >
+              <a
+                href="#contacto"
+                class="text-[#003D7A] hover:text-[#00A9E0] transition-colors font-bold uppercase text-sm"
+                >Contacto</a
+              >
+            </nav>
+            <div class="md:hidden">
+              <button
+                id="mobile-menu-btn"
+                class="p-2 text-[#003D7A] focus:outline-none"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="35"
+                  height="35"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <line x1="3" y1="12" x2="21" y2="12"></line>
+                  <line x1="3" y1="6" x2="21" y2="6"></line>
+                  <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <nav
+          id="mobile-menu"
+          class="hidden flex-col bg-white/95 backdrop-blur-md border-t border-gray-100 md:hidden pb-4 shadow-2xl absolute w-full transition-all duration-300 origin-top transform opacity-0 scale-y-0"
+        >
+          <a
+            href="#inicio"
+            class="mobile-link block px-6 py-4 text-[#003D7A] font-bold uppercase text-xs border-b border-gray-100 hover:bg-blue-50 transition-colors"
+            >Inicio</a
+          >
+          <a
+            href="#informacion"
+            class="mobile-link block px-6 py-4 text-[#003D7A] font-bold uppercase text-xs border-b border-gray-100 hover:bg-blue-50 transition-colors"
+            >Información</a
+          >
+          <a
+            href="#deportes"
+            class="mobile-link block px-6 py-4 text-[#003D7A] font-bold uppercase text-xs border-b border-gray-100 hover:bg-blue-50 transition-colors"
+            >Deportes</a
+          >
+          <a
+            href="#novedades"
+            class="mobile-link block px-6 py-4 text-[#003D7A] font-bold uppercase text-xs border-b border-gray-100 hover:bg-blue-50 transition-colors"
+            >Novedades</a
+          >
+          <a
+            href="#institucion"
+            class="mobile-link block px-6 py-4 text-[#003D7A] font-bold uppercase text-xs border-b border-gray-100 hover:bg-blue-50 transition-colors"
+            >Institución</a
+          >
+          <a
+            href="#contacto"
+            class="mobile-link block px-6 py-4 text-[#003D7A] font-bold uppercase text-xs hover:bg-blue-50 transition-colors"
+            >Contacto</a
+          >
+        </nav>
+      </header>
+
+      <main class="w-full">
+        <section
+          id="inicio"
+          class="relative min-h-[500px] md:min-h-[600px] flex items-center justify-center overflow-hidden bg-gradient-to-r from-[#002244] to-[#003D7A]"
+        >
+          <div class="absolute inset-0 bg-black/20 z-0"></div>
+          <div
+            class="absolute inset-0 z-0 opacity-10"
+            style="
+              background-image: url(&quot;data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E&quot;);
+            "
+          ></div>
+          <div
+            class="container mx-auto px-6 py-24 text-center relative z-10 animate-[fadeIn_1s_ease-out_forwards]"
+          >
+            <h1
+              class="text-4xl sm:text-5xl md:text-7xl font-black text-white mb-6 leading-tight drop-shadow-2xl uppercase tracking-tighter animate-[slideUp_0.8s_ease-out_0.2s_forwards] opacity-0"
+            >
+              FEDERACIÓN DE PATINAJE<br />
+              <span
+                class="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-white"
+                >GRAN BUENOS AIRES</span
+              >
+            </h1>
+            <p
+              class="text-xl md:text-3xl text-blue-100/90 mb-12 font-medium drop-shadow-md max-w-3xl mx-auto animate-[slideUp_0.8s_ease-out_0.4s_forwards] opacity-0"
+            >
+              Pasión, Disciplina y Excelencia sobre Ruedas
+            </p>
+            <button
+              onclick="
+                document
+                  .getElementById('informacion')
+                  .scrollIntoView({ behavior: 'smooth' })
+              "
+              class="bg-white text-[#003D7A] hover:bg-gray-100 text-base px-10 py-4 rounded-full font-bold shadow-lg transition-all hover:scale-105 active:scale-95 border-2 border-white/20 hover:border-white"
+            >
+              VER INFO
             </button>
           </div>
-        </div>
-      </div>
-      <nav id="mobile-menu" class="hidden flex-col bg-white border-t border-gray-100 md:hidden pb-4 shadow-inner">
-        <a href="#inicio" class="mobile-link block px-6 py-4 text-[#003D7A] font-bold uppercase text-xs border-b border-gray-50">Inicio</a>
-        <a href="#informacion" class="mobile-link block px-6 py-4 text-[#003D7A] font-bold uppercase text-xs border-b border-gray-50">Información</a>
-        <a href="#deportes" class="mobile-link block px-6 py-4 text-[#003D7A] font-bold uppercase text-xs border-b border-gray-50">Deportes</a>
-        <a href="#novedades" class="mobile-link block px-6 py-4 text-[#003D7A] font-bold uppercase text-xs border-b border-gray-50">Novedades</a>
-        <a href="#institucion" class="mobile-link block px-6 py-4 text-[#003D7A] font-bold uppercase text-xs border-b border-gray-50">Institución</a>
-        <a href="#contacto" class="mobile-link block px-6 py-4 text-[#003D7A] font-bold uppercase text-xs">Contacto</a>
-      </nav>
-    </header>
+        </section>
 
-    <main class="w-full">
-      <section id="inicio" class="relative min-h-[500px] flex items-center justify-center overflow-hidden" style="background: linear-gradient(90deg, #b8d432 0%, #f9b233 15%, #f15a29 30%, #e94190 50%, #9b59b6 70%, #00a9e0 100%);">
-        <div class="container mx-auto px-6 py-24 text-center relative z-10">
-          <h1 class="text-3xl sm:text-5xl md:text-7xl font-black text-white mb-8 leading-tight drop-shadow-lg uppercase">FEDERACIÓN DE PATINAJE<br />GRAN BUENOS AIRES</h1>
-          <p class="text-2xl md:text-3xl text-white mb-12 font-normal drop-shadow-md">Pasión, Disciplina y Excelencia sobre Ruedas</p>
-          <button onclick="document.getElementById('informacion').scrollIntoView({ behavior: 'smooth' })" class="bg-white text-[#003D7A] hover:bg-gray-100 text-base px-10 py-5 rounded-full font-bold shadow-xl transition-all">VER INFO</button>
-        </div>
-      </section>
+        <section
+          id="informacion"
+          class="py-16 md:py-24 bg-gray-50 overflow-hidden"
+        >
+          <div class="container mx-auto px-16 md:px-6 max-w-6xl">
+            <div class="text-center mb-16">
+              <h2
+                class="text-3xl md:text-5xl font-bold text-[#003366] tracking-tight"
+              >
+                Información 2026
+              </h2>
+            </div>
 
-   <section id="informacion" class="py-16 md:py-24 bg-gray-50 overflow-hidden">
-  <div class="container mx-auto px-16 md:px-6 max-w-6xl">
-    
-   <div class="text-center mb-16">
-    <h2 class="text-3xl md:text-5xl font-bold text-[#003366] tracking-tight">
-        Información 2026
-    </h2>
-  </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div class="portal-card">
+                <div class="p-header">
+                  <i data-lucide="book-open" class="w-10 h-12"></i>
+                </div>
+                <div class="p-body">
+                  <h3 class="p-title">Reglamentos</h3>
+                  <div
+                    class="mt-auto flex flex-col items-center text-center w-full"
+                  >
+                    <a
+                      href="https://drive.google.com/drive/folders/1DIhtuJstekYZJQ27tk4MZKi1cQm4cKRF"
+                      target="_blank"
+                      class="p-btn bg-[#003D7A] hover:bg-[#002244] text-white w-[80%] uppercase"
+                      >C.A.P</a
+                    >
+                    <a
+                      href="https://drive.google.com/drive/folders/1BxoePixxSpgOw-x7JZViqkAm9HSOUqd1"
+                      target="_blank"
+                      class="p-btn bg-[#003D7A] hover:bg-[#002244] text-white w-[80%] uppercase"
+                      >WORLD SKATE</a
+                    >
+                    <a
+                      href="https://drive.google.com/file/d/1Sfby3oJ3rIbGaUoq3AP0aLR9XOxB1Knq/view"
+                      target="_blank"
+                      class="p-btn bg-[#003D7A] hover:bg-[#002244] text-white w-[80%] uppercase"
+                      >INTERNOS FGBA</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="portal-card">
+                <div class="p-header">
+                  <i data-lucide="calendar" class="w-10 h-10"></i>
+                </div>
+                <div class="p-body flex flex-col items-center">
+                  <h3 class="p-title text-center">Calendario</h3>
+                  <div class="p-img-box">
+                    <img
+                      loading="lazy"
+                      src="./public/images/design-mode/calendario2026.jpg"
+                      alt="Calendario"
+                    />
+                  </div>
+                  <div
+                    class="mt-auto flex flex-col items-center text-center w-full"
+                  >
+                    <a
+                      href="https://drive.google.com/file/d/1isdb5RsVK0wXMw4HLuCMVxIMWf2UaYp9/view"
+                      target="_blank"
+                      class="p-btn bg-[#003D7A] hover:bg-[#002244] text-white w-[80%] mx-auto justify-center text-center"
+                      >VER CALENDARIO</a
+                    >
+                  </div>
+                </div>
+              </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-      
-      <div class="portal-card">
-        <div class="p-header h-24 bg-[#d32f2f]">
-          <i data-lucide="book-open" class="w-10 h-12"></i>
-        </div>
-        <div class="p-body">
-          <h3 class="p-title">Reglamentos</h3>
-          <div class="mt-auto flex flex-col items-center text-center">
-            <a href="https://drive.google.com/drive/folders/1DIhtuJstekYZJQ27tk4MZKi1cQm4cKRF" target="_blank" class="p-btn bg-[#d32f2f] text-white w-[80%] uppercase">C.A.P</a>
-            <a href="https://drive.google.com/drive/folders/1BxoePixxSpgOw-x7JZViqkAm9HSOUqd1" target="_blank" class="p-btn bg-[#d32f2f] text-white w-[80%] uppercase">WORLD SKATE</a>
-            <a href="https://drive.google.com/file/d/1Sfby3oJ3rIbGaUoq3AP0aLR9XOxB1Knq/view" target="_blank" class="p-btn bg-[#d32f2f] text-white w-[80%] uppercase">INTERNOS FGBA</a>
+              <div class="portal-card">
+                <div class="p-header">
+                  <i data-lucide="file-text" class="w-10 h-10"></i>
+                </div>
+                <div class="p-body flex flex-col items-center">
+                  <h3 class="p-title text-center">Notas CAP</h3>
+                  <div class="p-img-box">
+                    <img
+                      loading="lazy"
+                      src="./public/images/companies/cap.jpeg"
+                      alt="Notas"
+                    />
+                  </div>
+                  <div
+                    class="mt-auto flex flex-col items-center text-center w-full"
+                  >
+                    <a
+                      href="https://drive.google.com/drive/folders/1KHXmdDYLCcMz8LK_txDqsOrGaxrb1kOX"
+                      target="_blank"
+                      class="p-btn bg-[#003D7A] hover:bg-[#002244] text-white w-[80%] mx-auto justify-center text-center"
+                      >VER NOTAS</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="portal-card">
+                <div class="p-header">
+                  <i data-lucide="shield-check" class="w-10 h-12"></i>
+                </div>
+                <div class="p-body">
+                  <h3 class="p-title">FGBA 2026</h3>
+                  <div
+                    class="mt-auto flex flex-col items-center text-center w-full"
+                  >
+                    <a
+                      href="https://drive.google.com/drive/folders/1maPVIw3MO0WyikX9Hp5jQDqcWYN2KjjK"
+                      target="_blank"
+                      class="p-btn bg-[#003D7A] hover:bg-[#002244] text-white w-[80%] uppercase"
+                      >PROGRAMACIONES</a
+                    >
+                    <a
+                      href="https://drive.google.com/drive/folders/1Hn2fcAoUM16geOC8dfz8zw1MK3qk0mtC?usp=sharing"
+                      target="_blank"
+                      class="p-btn bg-[#003D7A] hover:bg-[#002244] text-white w-[80%] uppercase"
+                      >NOTAS</a
+                    >
+                    <a
+                      href="https://drive.google.com/drive/folders/1tZXXa7mr5em9Ntci0xbmoa1QzMDeqeSG"
+                      target="_blank"
+                      class="p-btn bg-[#003D7A] hover:bg-[#002244] text-white w-[80%] uppercase"
+                      >BOLETINES</a
+                    >
+                    <a
+                      href="https://drive.google.com/drive/folders/1cuR-7GMp85Bi1O0xnXxrOrFPFxVf_YBN"
+                      target="_blank"
+                      class="p-btn bg-[#003D7A] hover:bg-[#002244] text-white w-[80%] uppercase"
+                      >ESTATUTO</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-<div class="portal-card">
-  <div class="p-header h-24 bg-[#fdd835] text-white">
-    <i data-lucide="calendar" class="w-10 h-10"></i>
-  </div>
-  <div class="p-body flex flex-col items-center">
-    <h3 class="p-title text-center">Calendario</h3>
-    <div class="p-img-box"><img src="./public/images/design-mode/calendario2026.jpg" alt="Calendario"></div>
-    <a href="https://drive.google.com/file/d/1isdb5RsVK0wXMw4HLuCMVxIMWf2UaYp9/view" target="_blank" class="p-btn bg-[#fdd835] text-gray-800 w-[80%] mx-auto justify-center text-center">VER CALENDARIO</a>
-  </div>
-</div>
-
-<div class="portal-card">
-  <div class="p-header h-24 bg-[#69b0d8] text-white">
-    <i data-lucide="file-text" class="w-10 h-10"></i>
-  </div>
-  <div class="p-body flex flex-col items-center">
-    <h3 class="p-title text-center">Notas CAP</h3>
-    <div class="p-img-box"><img src="./public/images/companies/cap.jpeg" alt="Notas"></div>
-    <a href="https://drive.google.com/drive/folders/1KHXmdDYLCcMz8LK_txDqsOrGaxrb1kOX" target="_blank" class="p-btn bg-[#69b0d8] text-gray-800 w-[80%] mx-auto justify-center text-center">VER NOTAS</a>
-  </div>
-</div>
-
-      <div class="portal-card">
-        <div class="p-header h-24 bg-[#8bc34a] text-white">
-          <i data-lucide="shield-check" class="w-10 h-12"></i>
-        </div>
-        <div class="p-body">
-          <h3 class="p-title">FGBA 2026</h3>
-          <div class="mt-auto flex flex-col items-center text-center">
-           <a href="https://drive.google.com/drive/folders/1maPVIw3MO0WyikX9Hp5jQDqcWYN2KjjK" target="_blank" class="p-btn bg-[#8bc34a] text-white w-[80%] uppercase">PROGRAMACIONES</a>
-           <a href="https://drive.google.com/drive/folders/1Hn2fcAoUM16geOC8dfz8zw1MK3qk0mtC?usp=sharing" target="_blank" class="p-btn bg-[#8bc34a] text-white w-[80%] uppercase">NOTAS</a>
-           <a href="https://drive.google.com/drive/folders/1tZXXa7mr5em9Ntci0xbmoa1QzMDeqeSG" target="_blank" class="p-btn bg-[#8bc34a] text-white w-[80%] uppercase">BOLETINES</a>
-           <a href="https://drive.google.com/drive/folders/1cuR-7GMp85Bi1O0xnXxrOrFPFxVf_YBN" target="_blank" class="p-btn bg-[#8bc34a] text-white w-[80%] uppercase">ESTATUTO</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
+        </section>
         <!-- Sección Deportes -->
         <section id="deportes" class="py-16 bg-white">
           <div class="container mx-auto px-4">
@@ -182,6 +462,7 @@ h2 {
               >
                 <div class="relative h-80">
                   <img
+                    loading="lazy"
                     src="./public/images/design-mode/PHOTO-2025-11-27-19-43-13.jpg"
                     alt="Patinaje Artístico"
                     class="object-contain w-full h-full"
@@ -206,6 +487,7 @@ h2 {
               >
                 <div class="relative h-80">
                   <img
+                    loading="lazy"
                     src="./public/images/design-mode/velocidad.jpg"
                     alt="Patinaje de Velocidad"
                     class="object-contain w-full h-full"
@@ -226,129 +508,268 @@ h2 {
             </div>
           </div>
         </section>
-<section id="novedades" class="py-16 bg-gray-50">
-  <div class="container mx-auto px-4">
-    <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 federation-blue">
-      Novedades 
-    </h2>
+        <section id="novedades" class="py-16 bg-gray-50">
+          <div class="container mx-auto px-4">
+            <h2
+              class="text-4xl md:text-5xl font-bold text-center mb-12 federation-blue"
+            >
+              Novedades
+            </h2>
 
-       <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-  
-  <div class="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm overflow-hidden hover:shadow-xl transition-shadow h-full">
-    <div class="relative h-56">
-      <img src="./public/images/design-mode/conferencia.png" alt="Primer Workshop 2026 de la CAP" class="object-contain w-full h-full" />
-    </div>
-    <div class="px-6 p-6 flex flex-col flex-grow">
-      <p class="text-sm text-gray-500 mb-2 font-semibold">10/05/2026</p>
-      <h4 class="font-bold text-xl mb-3 federation-blue">Primer Workshop 2026 de la CAP</h4>
-      <p class="text-gray-600 leading-relaxed text-sm">
-        ✨¡Nuestra Federación dijo presente en el Primer Workshop 2026 de la CAP! En el Comité Olímpico Argentino, Luciano Fernandez, Emiliano Mendoz y Graciela Pugliese participaron de este espacio de formación y construcción colectiva. Seguimos impulsando el crecimiento y desarrollo del patinaje nacional mediante el trabajo en equipo y la capacitación.
-      </p> </div>
-  </div>  
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              <div
+                class="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm overflow-hidden hover:shadow-xl transition-shadow h-full"
+              >
+                <div class="relative h-56">
+                  <img
+                    loading="lazy"
+                    src="./public/images/design-mode/conferencia.png"
+                    alt="Primer Workshop 2026 de la CAP"
+                    class="object-contain w-full h-full"
+                  />
+                </div>
+                <div class="px-6 p-6 flex flex-col flex-grow">
+                  <p class="text-sm text-gray-500 mb-2 font-semibold">
+                    10/05/2026
+                  </p>
+                  <h4 class="font-bold text-xl mb-3 federation-blue">
+                    Primer Workshop 2026 de la CAP
+                  </h4>
+                  <p class="text-gray-600 leading-relaxed text-sm">
+                    ✨¡Nuestra Federación dijo presente en el Primer Workshop
+                    2026 de la CAP! En el Comité Olímpico Argentino, Luciano
+                    Fernandez, Emiliano Mendoz y Graciela Pugliese participaron
+                    de este espacio de formación y construcción colectiva.
+                    Seguimos impulsando el crecimiento y desarrollo del patinaje
+                    nacional mediante el trabajo en equipo y la capacitación.
+                  </p>
+                </div>
+              </div>
 
-  <div class="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm overflow-hidden hover:shadow-xl transition-shadow h-full">
-    <div class="relative h-56">
-      <img src="./public/images/design-mode/wsarg.jpg" alt="FINALIZÓ LA SERIE WORLD SKATE BS.AS/ARG" class="object-contain w-full h-full" />
-    </div>
-    <div class="px-6 p-6 flex flex-col flex-grow">
-      <p class="text-sm text-gray-500 mb-2 font-semibold">20/04/2026</p>
-      <h4 class="font-bold text-xl mb-3 federation-blue">FINALIZÓ LA SERIE WORLD SKATE BS.AS/ARG</h4>
-      <p class="text-gray-600 leading-relaxed text-sm">
-        Queremos felicitar a nuestros atletas de Alto rendimiento por formar parte de este gran evento internacional en LIBRE-Sofia Villagra, Maximo Sosa, Kiara Fernandez, Neyen Zahir, Zoe Manggia y Martin Vega. DANZA- Lola autorde, Delfi Velja, Delfi Esmail Y Meli Norro/ Luciano que son parte de FGBA💙💚💛❤️
-      </p> </div>
-  </div>
+              <div
+                class="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm overflow-hidden hover:shadow-xl transition-shadow h-full"
+              >
+                <div class="relative h-56">
+                  <img
+                    loading="lazy"
+                    src="./public/images/design-mode/wsarg.jpg"
+                    alt="FINALIZÓ LA SERIE WORLD SKATE BS.AS/ARG"
+                    class="object-contain w-full h-full"
+                  />
+                </div>
+                <div class="px-6 p-6 flex flex-col flex-grow">
+                  <p class="text-sm text-gray-500 mb-2 font-semibold">
+                    20/04/2026
+                  </p>
+                  <h4 class="font-bold text-xl mb-3 federation-blue">
+                    FINALIZÓ LA SERIE WORLD SKATE BS.AS/ARG
+                  </h4>
+                  <p class="text-gray-600 leading-relaxed text-sm">
+                    Queremos felicitar a nuestros atletas de Alto rendimiento
+                    por formar parte de este gran evento internacional en
+                    LIBRE-Sofia Villagra, Maximo Sosa, Kiara Fernandez, Neyen
+                    Zahir, Zoe Manggia y Martin Vega. DANZA- Lola autorde, Delfi
+                    Velja, Delfi Esmail Y Meli Norro/ Luciano que son parte de
+                    FGBA💙💚💛❤️
+                  </p>
+                </div>
+              </div>
 
-  <div class="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm overflow-hidden hover:shadow-xl transition-shadow h-full">
-    <div class="relative h-56">
-      <img src="./public/images/design-mode/torneocap.jpg" alt="Artistic World Cup del 11 al 19 de Abril 2026 ARG" class="object-contain w-full h-full" />
-    </div>
-    <div class="px-6 p-6 flex flex-col flex-grow">
-      <p class="text-sm text-gray-500 mb-2 font-semibold">07/04/2026</p>
-      <h4 class="font-bold text-xl mb-3 federation-blue"> Copa Apertura 2026 del 16 al 25 de marzo</h4>
-      <p class="text-gray-600 leading-relaxed text-sm">
-        El evento reunió a los mejores deportistas de todo el país, convirtiéndose en un escenario de gran nivel competitivo, donde el compromiso, la dedicación y la pasión por el patinaje artístico fueron protagonistas. ¡Felicitamos a nuestros atletas por su esfuerzo y constancia en cada presentación! 👏
-      </p>
-    </div>
-  </div>
+              <div
+                class="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm overflow-hidden hover:shadow-xl transition-shadow h-full"
+              >
+                <div class="relative h-56">
+                  <img
+                    loading="lazy"
+                    src="./public/images/design-mode/torneocap.jpg"
+                    alt="Artistic World Cup del 11 al 19 de Abril 2026 ARG"
+                    class="object-contain w-full h-full"
+                  />
+                </div>
+                <div class="px-6 p-6 flex flex-col flex-grow">
+                  <p class="text-sm text-gray-500 mb-2 font-semibold">
+                    07/04/2026
+                  </p>
+                  <h4 class="font-bold text-xl mb-3 federation-blue">
+                    Copa Apertura 2026 del 16 al 25 de marzo
+                  </h4>
+                  <p class="text-gray-600 leading-relaxed text-sm">
+                    El evento reunió a los mejores deportistas de todo el país,
+                    convirtiéndose en un escenario de gran nivel competitivo,
+                    donde el compromiso, la dedicación y la pasión por el
+                    patinaje artístico fueron protagonistas. ¡Felicitamos a
+                    nuestros atletas por su esfuerzo y constancia en cada
+                    presentación! 👏
+                  </p>
+                </div>
+              </div>
 
-  <div class="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm overflow-hidden hover:shadow-xl transition-shadow h-full">
-    <div class="relative h-56">
-      <img src="./public/images/design-mode/worldcup2026.png" alt="Artistic World Cup del 11 al 19 de Abril 2026 ARG" class="object-contain w-full h-full" />
-    </div>
-    <div class="px-6 p-6 flex flex-col flex-grow">
-      <p class="text-sm text-gray-500 mb-2 font-semibold">12/03/2026</p>
-      <h4 class="font-bold text-xl mb-3 federation-blue">Artistic World Cup del 11 al 19 de Abril 2026 🇦🇷</h4>
-      <p class="text-gray-600 leading-relaxed text-sm">
-        ¡Nos enorgullece su camino y dedicación! Felicitaciones🌟 Autorde Lola, Chajchir Agustina, Esmail Delfina, Fernandez Kiara, Gonzalez Valentina, Lafuente Zahir, Manggia Zoe, Moyano Agostina, Puia Luna, Sosa Maximo, Vargas Akemi, Vega Aybar Martin, Veljanovich Delfina y Villagra Sofia.
-      </p>
-    </div>
-  </div>
+              <div
+                class="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm overflow-hidden hover:shadow-xl transition-shadow h-full"
+              >
+                <div class="relative h-56">
+                  <img
+                    loading="lazy"
+                    src="./public/images/design-mode/worldcup2026.png"
+                    alt="Artistic World Cup del 11 al 19 de Abril 2026 ARG"
+                    class="object-contain w-full h-full"
+                  />
+                </div>
+                <div class="px-6 p-6 flex flex-col flex-grow">
+                  <p class="text-sm text-gray-500 mb-2 font-semibold">
+                    12/03/2026
+                  </p>
+                  <h4 class="font-bold text-xl mb-3 federation-blue">
+                    Artistic World Cup del 11 al 19 de Abril 2026 🇦🇷
+                  </h4>
+                  <p class="text-gray-600 leading-relaxed text-sm">
+                    ¡Nos enorgullece su camino y dedicación! Felicitaciones🌟
+                    Autorde Lola, Chajchir Agustina, Esmail Delfina, Fernandez
+                    Kiara, Gonzalez Valentina, Lafuente Zahir, Manggia Zoe,
+                    Moyano Agostina, Puia Luna, Sosa Maximo, Vargas Akemi, Vega
+                    Aybar Martin, Veljanovich Delfina y Villagra Sofia.
+                  </p>
+                </div>
+              </div>
 
-  <div class="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm overflow-hidden hover:shadow-xl transition-shadow h-full">
-    <div class="relative h-56">
-      <img src="./public/images/design-mode/nuevamalla.jpg" alt="Presentamos la nueva malla de FGBA✨" class="object-contain w-full h-full" />
-    </div>
-    <div class="px-6 p-6 flex flex-col flex-grow">
-      <p class="text-sm text-gray-500 mb-2 font-semibold">11/02/2026</p>
-      <h4 class="font-bold text-xl mb-3 federation-blue">Presentamos la nueva malla de FGBA✨</h4>
-      <p class="text-gray-600 leading-relaxed text-sm">
-        Este diseño simboliza nuestra historia e identidad. Recuperamos los colores de nuestro origen para transformarlos en potencia y energía, proyectando un futuro de superación, honrando siempre la esencia deportiva que nos define y nos impulsa a lo más alto en cada competencia💙💚💛❤️
-      </p>
-    </div>
-  </div>
+              <div
+                class="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm overflow-hidden hover:shadow-xl transition-shadow h-full"
+              >
+                <div class="relative h-56">
+                  <img
+                    loading="lazy"
+                    src="./public/images/design-mode/nuevamalla.jpg"
+                    alt="Presentamos la nueva malla de FGBA✨"
+                    class="object-contain w-full h-full"
+                  />
+                </div>
+                <div class="px-6 p-6 flex flex-col flex-grow">
+                  <p class="text-sm text-gray-500 mb-2 font-semibold">
+                    11/02/2026
+                  </p>
+                  <h4 class="font-bold text-xl mb-3 federation-blue">
+                    Presentamos la nueva malla de FGBA✨
+                  </h4>
+                  <p class="text-gray-600 leading-relaxed text-sm">
+                    Este diseño simboliza nuestra historia e identidad.
+                    Recuperamos los colores de nuestro origen para
+                    transformarlos en potencia y energía, proyectando un futuro
+                    de superación, honrando siempre la esencia deportiva que nos
+                    define y nos impulsa a lo más alto en cada
+                    competencia💙💚💛❤️
+                  </p>
+                </div>
+              </div>
 
-  <div class="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm overflow-hidden hover:shadow-xl transition-shadow h-full">
-    <div class="relative h-56">
-      <img src="./public/images/design-mode/ciclo2025.jpg" alt="Gran Cierre del Ciclo 2025🌟" class="object-contain w-full h-full" />
-    </div>
-    <div class="px-6 p-6 flex flex-col flex-grow">
-      <p class="text-sm text-gray-500 mb-2 font-semibold">08/12/2025</p>
-      <h4 class="font-bold text-xl mb-3 federation-blue">Gran Cierre del Ciclo 2025🌟</h4>
-      <p class="text-gray-600 leading-relaxed text-sm">
-        Con más de 1.500 personas, vivimos un cierre inolvidable en José C. Paz junto a nuestros atletas, familias, entrenadores y jueces. ¡Gracias por ser parte, por ayudarnos a seguir creciendo juntos y felices fiestas! 💙💚💛❤️
-      </p>
-    </div>
-  </div>
+              <div
+                class="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm overflow-hidden hover:shadow-xl transition-shadow h-full"
+              >
+                <div class="relative h-56">
+                  <img
+                    loading="lazy"
+                    src="./public/images/design-mode/ciclo2025.jpg"
+                    alt="Gran Cierre del Ciclo 2025🌟"
+                    class="object-contain w-full h-full"
+                  />
+                </div>
+                <div class="px-6 p-6 flex flex-col flex-grow">
+                  <p class="text-sm text-gray-500 mb-2 font-semibold">
+                    08/12/2025
+                  </p>
+                  <h4 class="font-bold text-xl mb-3 federation-blue">
+                    Gran Cierre del Ciclo 2025🌟
+                  </h4>
+                  <p class="text-gray-600 leading-relaxed text-sm">
+                    Con más de 1.500 personas, vivimos un cierre inolvidable en
+                    José C. Paz junto a nuestros atletas, familias, entrenadores
+                    y jueces. ¡Gracias por ser parte, por ayudarnos a seguir
+                    creciendo juntos y felices fiestas! 💙💚💛❤️
+                  </p>
+                </div>
+              </div>
 
-  <div class="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm overflow-hidden hover:shadow-xl transition-shadow h-full">
-    <div class="relative h-56">
-      <img src="./public/images/design-mode/mascota.png" alt="¡Bienvenido, GRANBITO!💙💚💛❤️" class="object-contain w-full h-full" />
-    </div>
-    <div class="px-6 p-6 flex flex-col flex-grow">
-      <p class="text-sm text-gray-500 mb-2 font-semibold">08/12/2025</p>
-      <h4 class="font-bold text-xl mb-3 federation-blue">¡Oficialmente GRANBITO! 🦓</h4>
-      <p class="text-gray-600 leading-relaxed text-sm line-clamp-4">
-        Elegido por nuestra comunidad en redes sociales, GRANBITO, nuestra mascota de la Federación💙💚💛❤️, tuvo su presentación oficial durante la fiesta de fin de año realizada en José C. Paz✨
-      </p>
-    </div>
-  </div>
+              <div
+                class="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm overflow-hidden hover:shadow-xl transition-shadow h-full"
+              >
+                <div class="relative h-56">
+                  <img
+                    loading="lazy"
+                    src="./public/images/design-mode/mascota.png"
+                    alt="¡Bienvenido, GRANBITO!💙💚💛❤️"
+                    class="object-contain w-full h-full"
+                  />
+                </div>
+                <div class="px-6 p-6 flex flex-col flex-grow">
+                  <p class="text-sm text-gray-500 mb-2 font-semibold">
+                    08/12/2025
+                  </p>
+                  <h4 class="font-bold text-xl mb-3 federation-blue">
+                    ¡Oficialmente GRANBITO! 🦓
+                  </h4>
+                  <p class="text-gray-600 leading-relaxed text-sm line-clamp-4">
+                    Elegido por nuestra comunidad en redes sociales, GRANBITO,
+                    nuestra mascota de la Federación💙💚💛❤️, tuvo su
+                    presentación oficial durante la fiesta de fin de año
+                    realizada en José C. Paz✨
+                  </p>
+                </div>
+              </div>
 
-  <div class="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm overflow-hidden hover:shadow-xl transition-shadow h-full">
-    <div class="relative h-56">
-      <img src="./public/images/design-mode/seminariows.jpg" alt="Seminario World Skate 2025" class="object-contain w-full h-full" />
-    </div>
-    <div class="px-6 p-6 flex flex-col flex-grow">
-      <p class="text-sm text-gray-500 mb-2 font-semibold">08/12/2025</p>
-      <h4 class="font-bold text-xl mb-3 federation-blue">Seminario World Skate 2025</h4>
-      <p class="text-gray-600 leading-relaxed text-sm line-clamp-4">
-        Romina Rodríguez, coordinadora de nuestros jueces, nos representó en el seminario internacional. Apostamos siempre a la excelencia, el crecimiento y la formación continua.
-      </p>
-    </div>
-  </div>
+              <div
+                class="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm overflow-hidden hover:shadow-xl transition-shadow h-full"
+              >
+                <div class="relative h-56">
+                  <img
+                    loading="lazy"
+                    src="./public/images/design-mode/seminariows.jpg"
+                    alt="Seminario World Skate 2025"
+                    class="object-contain w-full h-full"
+                  />
+                </div>
+                <div class="px-6 p-6 flex flex-col flex-grow">
+                  <p class="text-sm text-gray-500 mb-2 font-semibold">
+                    08/12/2025
+                  </p>
+                  <h4 class="font-bold text-xl mb-3 federation-blue">
+                    Seminario World Skate 2025
+                  </h4>
+                  <p class="text-gray-600 leading-relaxed text-sm line-clamp-4">
+                    Romina Rodríguez, coordinadora de nuestros jueces, nos
+                    representó en el seminario internacional. Apostamos siempre
+                    a la excelencia, el crecimiento y la formación continua.
+                  </p>
+                </div>
+              </div>
 
-  <div class="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm overflow-hidden hover:shadow-xl transition-shadow h-full">
-    <div class="relative h-56">
-      <img src="./public/images/design-mode/delfinamundial(1).jpg" alt="Delfina Veljanovich" class="object-contain w-full h-full" />
-    </div>
-    <div class="px-6 p-6 flex flex-col flex-grow">
-      <p class="text-sm text-gray-500 mb-2 font-semibold">28/10/2025</p>
-      <h4 class="font-bold text-xl mb-3 federation-blue">¡Orgullo Internacional!</h4>
-      <p class="text-gray-600 leading-relaxed text-sm line-clamp-4">
-        Delfina Veljanovich nos representó de manera increíble logrando el 7° puesto en Beijing Artistic World Championships. El resultado refleja dedicación, esfuerzo y pasión por este deporte.
-      </p>
-    </div>
-  </div>
-</div>
+              <div
+                class="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm overflow-hidden hover:shadow-xl transition-shadow h-full"
+              >
+                <div class="relative h-56">
+                  <img
+                    loading="lazy"
+                    src="./public/images/design-mode/delfinamundial(1).jpg"
+                    alt="Delfina Veljanovich"
+                    class="object-contain w-full h-full"
+                  />
+                </div>
+                <div class="px-6 p-6 flex flex-col flex-grow">
+                  <p class="text-sm text-gray-500 mb-2 font-semibold">
+                    28/10/2025
+                  </p>
+                  <h4 class="font-bold text-xl mb-3 federation-blue">
+                    ¡Orgullo Internacional!
+                  </h4>
+                  <p class="text-gray-600 leading-relaxed text-sm line-clamp-4">
+                    Delfina Veljanovich nos representó de manera increíble
+                    logrando el 7° puesto en Beijing Artistic World
+                    Championships. El resultado refleja dedicación, esfuerzo y
+                    pasión por este deporte.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
         <!-- Sección Institución -->
         <section id="institucion" class="py-16 bg-white">
           <div class="container mx-auto px-4">
@@ -813,6 +1234,7 @@ h2 {
                 <div class="grid md:grid-cols-2">
                   <div class="relative h-64 md:h-auto">
                     <img
+                      loading="lazy"
                       src="./public/images/design-mode/PHOTO-2025-11-27-19-53-37.jpg"
                       alt="Misión"
                       class="object-contain w-full h-full"
@@ -838,199 +1260,387 @@ h2 {
               </div>
             </div>
           </div>
-</section>
-<section id="contacto" class="py-16 bg-white border-t">
-  <div class="container mx-auto px-4 max-w-6xl">
-    
-    <h2 class="text-4xl font-bold text-center mb-12 text-[#003D7A]">Contacto</h2>
-    
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-      
-      <div class="bg-white rounded-2xl border p-8 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
-        
-        <div>
-          <h3 class="text-2xl font-bold mb-8 text-[#003D7A]">Sede Oficial</h3>
-          
-          <div class="space-y-8">
-            <div class="flex items-center gap-4 text-left">
-              <span class="text-3xl w-12 flex justify-center">📍</span>
-              <div>
-                <p class="font-bold text-[#003D7A] text-lg leading-none mb-1">Dirección</p>
-                <p class="text-gray-600 text-sm">Ombú 3334, San Justo. Buenos Aires 🇦🇷</p>
+        </section>
+        <section
+          id="contacto"
+          class="py-20 bg-gray-50 border-t border-gray-200"
+        >
+          <div class="container mx-auto px-6 max-w-6xl">
+            <h2
+              class="text-4xl font-black text-center mb-16 text-[#002244] uppercase tracking-tight"
+            >
+              Contacto
+            </h2>
+
+            <div
+              class="grid grid-cols-1 lg:grid-cols-5 gap-12 bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100"
+            >
+              <div
+                class="lg:col-span-2 p-10 flex flex-col justify-between bg-gradient-to-b from-white to-blue-50"
+              >
+                <div>
+                  <h3
+                    class="text-2xl font-bold mb-10 text-[#003D7A] border-b-2 border-[#003D7A]/20 pb-4 inline-block"
+                  >
+                    Sede Oficial
+                  </h3>
+
+                  <div class="space-y-10">
+                    <div class="flex items-start gap-5">
+                      <div
+                        class="w-12 h-12 rounded-xl bg-blue-100 text-[#003D7A] flex items-center justify-center flex-shrink-0 mt-1"
+                      >
+                        <i data-lucide="map-pin" class="w-6 h-6"></i>
+                      </div>
+                      <div>
+                        <p
+                          class="font-bold text-[#002244] text-lg leading-none mb-2"
+                        >
+                          Dirección
+                        </p>
+                        <p class="text-gray-600 font-medium">
+                          Ombú 3334, San Justo.<br />Buenos Aires 🇦🇷
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="flex items-start gap-5">
+                      <div
+                        class="w-12 h-12 rounded-xl bg-blue-100 text-[#003D7A] flex items-center justify-center flex-shrink-0 mt-1"
+                      >
+                        <i data-lucide="mail" class="w-6 h-6"></i>
+                      </div>
+                      <div>
+                        <p
+                          class="font-bold text-[#002244] text-lg leading-none mb-2"
+                        >
+                          Email
+                        </p>
+                        <a
+                          href="mailto:fgba.prensa@gmail.com"
+                          class="text-gray-600 hover:text-[#003D7A] font-medium transition-colors"
+                        >
+                          fgba.prensa@gmail.com
+                        </a>
+                      </div>
+                    </div>
+
+                    <div class="flex items-start gap-5">
+                      <div
+                        class="w-12 h-12 rounded-xl bg-green-100 text-green-600 flex items-center justify-center flex-shrink-0 mt-1"
+                      >
+                        <i data-lucide="message-circle" class="w-6 h-6"></i>
+                      </div>
+                      <div>
+                        <p
+                          class="font-bold text-[#002244] text-lg leading-none mb-2"
+                        >
+                          WhatsApp
+                        </p>
+                        <a
+                          href="https://wa.me/541154780320"
+                          target="_blank"
+                          class="text-gray-600 hover:text-green-600 transition-colors font-medium"
+                        >
+                          +54 11 5478-0320
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mt-12 pt-8 border-t border-blue-200/50">
+                  <h3
+                    class="text-lg font-bold mb-6 text-[#002244] uppercase tracking-wide"
+                  >
+                    Redes Sociales
+                  </h3>
+                  <div class="flex gap-5">
+                    <a
+                      href="https://www.facebook.com/share/1SciZ5j7q8/"
+                      target="_blank"
+                      class="w-12 h-12 bg-[#003D7A] rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform shadow-sm"
+                      aria-label="Facebook"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                      >
+                        <path
+                          d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"
+                        />
+                      </svg>
+                    </a>
+                    <a
+                      href="https://www.instagram.com/fed.gran.bs.as?igsh=YjF5d3BxdDA3enJw"
+                      target="_blank"
+                      class="w-12 h-12 bg-[#da3532] rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform shadow-sm"
+                      aria-label="Instagram"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect
+                          x="2"
+                          y="2"
+                          width="20"
+                          height="20"
+                          rx="5"
+                          ry="5"
+                        ></rect>
+                        <path
+                          d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                        ></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
               </div>
-            </div>
-            
-            <div class="flex items-center gap-4 text-left">
-              <span class="text-3xl w-12 flex justify-center">📧</span>
-              <div>
-                <p class="font-bold text-[#003D7A] text-lg leading-none mb-1">Email</p>
-                <p class="text-gray-600 text-sm">fgba.prensa@gmail.com</p>
-              </div>
-            </div>
-            
-            <div class="flex items-center gap-4 text-left">
-              <span class="w-12 flex justify-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#25D366" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/>
-                </svg>
-              </span>
-              <div>
-                <p class="font-bold text-[#003D7A] text-lg leading-none mb-1">WhatsApp</p>
-                <a href="https://wa.me/541154780320" target="_blank" class="text-gray-600 text-sm hover:text-[#25D366] transition-colors font-medium">
-                  +54 11 5478-0320
-                </a>
+
+              <div
+                class="lg:col-span-3 h-[450px] md:h-[500px] lg:h-full min-h-[400px] bg-gray-100 relative group"
+              >
+                <div
+                  class="absolute inset-0 bg-blue-900/10 pointer-events-none group-hover:bg-transparent transition-colors duration-500 z-10"
+                ></div>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.042852233083!2d-58.5574564!3d-34.6788229!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc6333630f55d%3A0xe212574061807469!2zT21iw7ogMzMzNCwgQjE3NTQgU2FuIEp1c3RvLCBQcm92aW5jaWEgZGUgQnVlbm9zIEFpcmVz!5e0!3m2!1ses!2sar!4v1710000000000!5m2!1ses!2sar"
+                  width="100%"
+                  height="100%"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  class="filter grayscale-[30%] contrast-[1.1] group-hover:grayscale-0 transition-all duration-500"
+                >
+                </iframe>
               </div>
             </div>
           </div>
+        </section>
+        <div class="text-center mb-12 mt-24">
+          <h2
+            class="text-4xl font-bold text-[#003D7A] uppercase tracking-tight"
+          >
+            SPONSORS 2026
+          </h2>
+          <div class="w-16 h-1 bg-[#da3532] mx-auto mt-3"></div>
         </div>
 
-        <div class="mt-10 pt-8 border-t border-gray-100">
-          <h3 class="text-xl font-bold mb-5 text-[#003D7A]">¡Seguinos en Redes Sociales!</h3>
-          <div class="flex gap-5">
-            <a href="https://www.facebook.com/share/1SciZ5j7q8/" target="_blank" class="w-12 h-12 bg-[#003D7A] rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform shadow-sm" aria-label="Facebook">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
-            </a>
-            <a href="https://www.instagram.com/fed.gran.bs.as?igsh=YjF5d3BxdDA3enJw" target="_blank" class="w-12 h-12 bg-[#da3532] rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform shadow-sm" aria-label="Instagram">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-            </a>
+        <section class="py-12 bg-white">
+          <div class="container mx-auto px-4">
+            <div
+              class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 items-center justify-center"
+            >
+              <a
+                href="https://www.instagram.com/serenarte.estampatextil/"
+                target="_blank"
+                class="block w-full h-32 relative group"
+              >
+                <img
+                  loading="lazy"
+                  src="./public/images/design-mode/serenarte.jpg"
+                  class="w-full h-full object-contain filter grayscale opacity-70 transition-all duration-300 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105"
+                  alt="Sponsor Serenarte"
+                />
+              </a>
+
+              <a
+                href="https://www.instagram.com/mediasmodellinigolter/"
+                target="_blank"
+                class="block w-full h-32 relative group"
+              >
+                <img
+                  loading="lazy"
+                  src="./public/images/design-mode/modellini1.jpg"
+                  class="w-full h-full object-contain filter grayscale opacity-70 transition-all duration-300 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105"
+                  alt="Sponsor Modellini"
+                />
+              </a>
+
+              <a
+                href="https://www.instagram.com/nadibel_todoparapatin/"
+                target="_blank"
+                class="block w-full h-32 relative group"
+              >
+                <img
+                  loading="lazy"
+                  src="./public/images/design-mode/Nadibel.jpg"
+                  class="w-full h-full object-contain filter grayscale opacity-70 transition-all duration-300 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105"
+                  alt="Sponsor NadiBel"
+                />
+              </a>
+
+              <a
+                href="https://www.instagram.com/fvproducciones_/"
+                target="_blank"
+                class="block w-full h-32 relative group"
+              >
+                <img
+                  loading="lazy"
+                  src="./public/images/design-mode/fvproducciones.png"
+                  class="w-full h-full object-contain filter grayscale opacity-70 transition-all duration-300 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105"
+                  alt="Sponsor FVPRODUCCIONES"
+                />
+              </a>
+
+              <a
+                href="https://www.instagram.com/juguetes_lucerito?igsh=eXlmdmNlNWtrMDY1"
+                target="_blank"
+                class="block w-full h-32 relative group"
+              >
+                <img
+                  loading="lazy"
+                  src="./public/images/design-mode/lucerito.png"
+                  class="w-full h-full object-contain filter grayscale opacity-70 transition-all duration-300 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105"
+                  alt="Sponsor LUCERITO"
+                />
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+      <section class="w-full px-6 py-12 bg-gray-50 border-t border-gray-100">
+        <div
+          class="max-w-6xl mx-auto flex gap-8 justify-center flex-wrap items-center"
+        >
+          <div
+            class="w-24 h-24 md:w-32 md:h-32 flex items-center justify-center group cursor-pointer"
+          >
+            <img
+              loading="lazy"
+              src="./public/images/companies/cap.jpeg"
+              alt="CAP"
+              class="w-full h-full object-contain filter grayscale opacity-60 transition-all duration-300 group-hover:grayscale-0 group-hover:opacity-100"
+            />
+          </div>
+          <div
+            class="w-24 h-24 md:w-32 md:h-32 flex items-center justify-center group cursor-pointer"
+          >
+            <img
+              loading="lazy"
+              src="./public/images/companies/comite-olimpico.jpeg"
+              alt="COA"
+              class="w-full h-full object-contain filter grayscale opacity-60 transition-all duration-300 group-hover:grayscale-0 group-hover:opacity-100"
+            />
+          </div>
+          <div
+            class="w-24 h-24 md:w-32 md:h-32 flex items-center justify-center group cursor-pointer"
+          >
+            <img
+              loading="lazy"
+              src="./public/images/companies/enard.jpeg"
+              alt="ENARD"
+              class="w-full h-full object-contain filter grayscale opacity-60 transition-all duration-300 group-hover:grayscale-0 group-hover:opacity-100"
+            />
+          </div>
+          <div
+            class="w-24 h-24 md:w-32 md:h-32 flex items-center justify-center group cursor-pointer"
+          >
+            <img
+              loading="lazy"
+              src="./public/images/companies/world-skate-america.jpeg"
+              alt="WSA"
+              class="w-full h-full object-contain filter grayscale opacity-60 transition-all duration-300 group-hover:grayscale-0 group-hover:opacity-100"
+            />
+          </div>
+          <div
+            class="w-24 h-24 md:w-32 md:h-32 flex items-center justify-center group cursor-pointer"
+          >
+            <img
+              loading="lazy"
+              src="./public/images/companies/world-skate.jpeg"
+              alt="World Skate"
+              class="w-full h-full object-contain filter grayscale opacity-60 transition-all duration-300 group-hover:grayscale-0 group-hover:opacity-100"
+            />
           </div>
         </div>
-      </div>
+      </section>
+    </div>
+    <footer
+      class="bg-[#0f172a] text-white py-12 w-full border-t border-slate-800"
+    >
+      <div class="container mx-auto px-4 text-center">
+        <p class="text-base font-bold tracking-tight mb-2">
+          Federación de Patinaje Gran Buenos Aires
+        </p>
 
-      <div class="h-[450px] md:h-full min-h-[400px] rounded-2xl overflow-hidden border shadow-sm">
-        <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.042852233083!2d-58.5574564!3d-34.6788229!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc6333630f55d%3A0xe212574061807469!2zT21iw7ogMzMzNCwgQjE3NTQgU2FuIEp1c3RvLCBQcm92aW5jaWEgZGUgQnVlbm9zIEFpcmVz!5e0!3m2!1ses!2sar!4v1710000000000!5m2!1ses!2sar" 
-          width="100%" 
-          height="100%" 
-          style="border:0;" 
-          allowfullscreen="" 
-          loading="lazy">
-        </iframe>
-      </div>
-
-    </div>
-  </div>
-</section>
-<div class="text-center mb-12 mt-24">
-  <h2 class="text-4xl font-bold text-[#003D7A] uppercase tracking-tight">SPONSORS 2026</h2>
-  <div class="w-16 h-1 bg-[#da3532] mx-auto mt-3"></div>
-</div>
-
-<section class="py-12 bg-white">
-  <div class="container mx-auto px-4">
-    <div class="max-w-5xl mx-auto space-y-8"> 
-      
-      <div class="relative h-64 md:h-80 overflow-hidden rounded-2xl shadow-lg border-4 border-white group">
-        <a href="https://www.instagram.com/serenarte.estampatextil/" target="_blank" class="block w-full h-full">
-          <img src="./public/images/design-mode/serenarte.jpg" 
-               class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
-               alt="Sponsor Serenarte"/>
-          <div class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300"></div>
-        </a>
-      </div>
-
-      <div class="relative h-64 md:h-80 overflow-hidden rounded-2xl shadow-lg border-4 border-white group">
-        <a href="https://www.instagram.com/mediasmodellinigolter/" target="_blank" class="block w-full h-full">
-          <img src="./public/images/design-mode/modellini1.jpg" 
-               class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
-               alt="Sponsor Modellini"/>
-          <div class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300"></div>
-        </a>
-      </div>
-      
-        <div class="relative h-64 md:h-80 overflow-hidden rounded-2xl shadow-lg border-4 border-white group">
-        <a href="https://www.instagram.com/nadibel_todoparapatin/" target="_blank" class="block w-full h-full">
-          <img src="./public/images/design-mode/Nadibel.jpg" 
-               class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
-               alt="Sponsor NadiBel"/>
-          <div class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300"></div>
-        </a>
-    </div>
-       <div class="relative h-64 md:h-80 overflow-hidden rounded-2xl shadow-lg border-4 border-white group">
-        <a href="https://www.instagram.com/fvproducciones_/" target="_blank" class="block w-full h-full">
-          <img src="./public/images/design-mode/fvproducciones.png" 
-               class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
-               alt="Sponsor FVPRODUCCIONES"/>
-          <div class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300"></div>
-        </a>
-    </div>
-      <div class="relative h-64 md:h-80 overflow-hidden rounded-2xl shadow-lg border-4 border-white group">
-        <a href="https://www.instagram.com/juguetes_lucerito?igsh=eXlmdmNlNWtrMDY1" target="_blank" class="block w-full h-full">
-          <img src="./public/images/design-mode/lucerito.png" 
-               class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
-               alt="Sponsor LUCERITO"/>
-          <div class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300"></div>
-        </a>
-    </div>
-  </div>
-</section>
-
-<footer class="w-full px-12 py-8 bg-white border-t-2">
-  <div class="flex gap-4 w-full justify-center flex-wrap mb-0">
-    <div class="w-44 h-44 items-center justify-center flex">
-      <img src="./public/images/companies/cap.jpeg" alt="CAP" class="w-full h-full object-contain" />
-    </div>
-    <div class="w-44 h-44 items-center justify-center flex">
-      <img src="./public/images/companies/comite-olimpico.jpeg" alt="COA" class="w-full h-full object-contain" />
-    </div>
-    <div class="w-44 h-44 items-center justify-center flex">
-      <img src="./public/images/companies/enard.jpeg" alt="ENARD" class="w-full h-full object-contain" />
-    </div>
-    <div class="w-44 h-44 items-center justify-center flex">
-      <img src="./public/images/companies/world-skate-america.jpeg" alt="WSA" class="w-full h-full object-contain" />
-    </div>
-    <div class="w-44 h-44 items-center justify-center flex">
-      <img src="./public/images/companies/world-skate.jpeg" alt="World Skate" class="w-full h-full object-contain" />
-    </div>
- </main> 
-  </div> 
-<footer class="bg-[#0f172a] text-white py-12 w-full border-t border-slate-800">
-  <div class="container mx-auto px-4 text-center">
-    <p class="text-base font-bold tracking-tight mb-2">
-      Federación de Patinaje Gran Buenos Aires
-    </p>
-
-    <p class="text-[10px] opacity-60 font-bold uppercase tracking-[0.2em]">
-      Todos los derechos reservados <span id="year-final"></span>
-    </p>
+        <p class="text-[10px] opacity-60 font-bold uppercase tracking-[0.2em]">
+          Todos los derechos reservados <span id="year-final"></span>
+        </p>
         <p class="text-[12px] mt-4 opacity-60 uppercase tracking-[0.2em]">
-      Visitas: <span class="font-bold">10.338✨</span>
-    </p>
-    <p class="text-[10px] mt-8 opacity-40 uppercase tracking-[0.2em]">
-      Diseño y Desarrollo por 
-      <a href="mailto:camilacastillo.work@gmail.com" 
-         class="hover:text-blue-400 transition-colors underline decoration-slate-700 underline-offset-4">
-        Camila Castillo
-      </a>
-    </p>
+          Visitas: <span class="font-bold">10.338✨</span>
+        </p>
+        <p class="text-[10px] mt-8 opacity-40 uppercase tracking-[0.2em]">
+          Diseño y Desarrollo por
+          <a
+            href="mailto:camilacastillo.work@gmail.com"
+            class="hover:text-blue-400 transition-colors underline decoration-slate-700 underline-offset-4"
+          >
+            Camila Castillo
+          </a>
+        </p>
+      </div>
+    </footer>
 
-  </div>
-</footer>
+    <script>
+      // 1. ESTO ACTIVA LOS ICONOS (Vital)
+      lucide.createIcons();
 
-<script>
-    // 1. ESTO ACTIVA LOS ICONOS (Vital)
-    lucide.createIcons();
+      // 2. AÑO AUTOMÁTICO
+      const spanAnio = document.getElementById("year-final");
+      if (spanAnio) {
+        spanAnio.textContent = new Date().getFullYear();
+      }
 
-    // 2. AÑO AUTOMÁTICO
-    const spanAnio = document.getElementById("year-final");
-    if (spanAnio) { spanAnio.textContent = new Date().getFullYear(); }
+      // 3. MENÚ MOBILE
+      const btnMovil = document.getElementById("mobile-menu-btn");
+      const menuMovil = document.getElementById("mobile-menu");
+      const links = document.querySelectorAll(".mobile-link");
 
-    // 3. MENÚ MOBILE
-    const btnMovil = document.getElementById("mobile-menu-btn");
-    const menuMovil = document.getElementById("mobile-menu");
-    const links = document.querySelectorAll(".mobile-link");
+      if (btnMovil && menuMovil) {
+        btnMovil.onclick = () => {
+          if (menuMovil.classList.contains("hidden")) {
+            menuMovil.classList.remove("hidden");
+            // Pequeño timeout para permitir que el display block se aplique antes de la transición
+            setTimeout(() => {
+              menuMovil.classList.add("flex", "opacity-100", "scale-y-100");
+              menuMovil.classList.remove("opacity-0", "scale-y-0");
+            }, 10);
+          } else {
+            menuMovil.classList.remove("opacity-100", "scale-y-100");
+            menuMovil.classList.add("opacity-0", "scale-y-0");
+            setTimeout(() => {
+              menuMovil.classList.add("hidden");
+              menuMovil.classList.remove("flex");
+            }, 300); // Coincide con la duración de la transición
+          }
+        };
 
-    if (btnMovil && menuMovil) {
-      btnMovil.onclick = () => {
-        menuMovil.classList.toggle("hidden");
-        menuMovil.classList.toggle("flex");
-      };
-      // Cerrar al clickear link
-      links.forEach(l => l.onclick = () => {
-        menuMovil.classList.add("hidden");
-        menuMovil.classList.remove("flex");
-      });
-    }
-  </script>
-</body>
+        // Cerrar al clickear link
+        links.forEach(
+          (l) =>
+            (l.onclick = () => {
+              menuMovil.classList.remove("opacity-100", "scale-y-100");
+              menuMovil.classList.add("opacity-0", "scale-y-0");
+              setTimeout(() => {
+                menuMovil.classList.add("hidden");
+                menuMovil.classList.remove("flex");
+              }, 300);
+            }),
+        );
+      }
+    </script>
+  </body>
 </html>
