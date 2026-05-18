@@ -15,6 +15,13 @@
       content="Sumate a la Federación Gran Buenos Aires. Mucho más que una institución, somos una comunidad dedicada a potenciar el patinaje."
     />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-PLGPQ8PJHF"
@@ -34,12 +41,29 @@
       tailwind.config = {
         theme: {
           extend: {
+            fontFamily: {
+              sans: ["Montserrat", "sans-serif"],
+            },
             colors: {
               "federation-blue": "#003366",
               "federation-green": "#5fb345",
               "federation-yellow": "#eae634",
               "federation-red": "#da3532",
               "federation-celeste": "#34bce1",
+            },
+            keyframes: {
+              fadeIn: {
+                "0%": { opacity: "0" },
+                "100%": { opacity: "1" },
+              },
+              slideUp: {
+                "0%": { opacity: "0", transform: "translateY(20px)" },
+                "100%": { opacity: "1", transform: "translateY(0)" },
+              },
+            },
+            animation: {
+              fadeIn: "fadeIn 1s ease-out forwards",
+              slideUp: "slideUp 0.8s ease-out forwards",
             },
           },
         },
@@ -60,66 +84,79 @@
       /* ESTILOS DE CARDS */
       .portal-card {
         background: #ffffff;
-        border-radius: 16px;
-        border: 1px solid #eef2f6;
+        border-radius: 20px;
+        border: 1px solid #e2e8f0;
         height: 100%;
-        transition: all 0.3s ease;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         display: flex;
         flex-direction: column;
+        overflow: hidden;
+        box-shadow:
+          0 4px 6px -1px rgba(0, 0, 0, 0.05),
+          0 2px 4px -1px rgba(0, 0, 0, 0.03);
       }
       .portal-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+        transform: translateY(-8px);
+        box-shadow:
+          0 20px 25px -5px rgba(0, 0, 0, 0.1),
+          0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        border-color: #003d7a;
       }
       .p-header {
-        height: 90px;
+        height: 100px;
         display: flex;
         align-items: center;
         justify-content: center;
         color: white;
-        border-radius: 16px 16px 0 0;
+        background: linear-gradient(135deg, #003d7a, #002244);
       }
       .p-body {
-        padding: 20px;
+        padding: 28px 24px;
         flex-grow: 1;
         display: flex;
         flex-direction: column;
         text-align: center;
       }
       .p-title {
-        font-size: 1.15rem;
+        font-size: 1.25rem;
         font-weight: 800;
-        color: #003366;
-        margin-bottom: 12px;
+        color: #002244;
+        margin-bottom: 16px;
         text-transform: uppercase;
+        letter-spacing: 0.05em;
       }
       .p-img-box {
         width: 100%;
-        height: 130px;
+        height: 140px;
         background: #f8fafc;
-        border-radius: 12px;
-        margin-bottom: 15px;
+        border-radius: 16px;
+        margin-bottom: 20px;
         display: flex;
         justify-content: center;
         align-items: center;
         overflow: hidden;
-        border: 1px solid #f1f5f9;
+        border: 1px solid #e2e8f0;
       }
       .p-img-box img {
-        max-width: 90%;
-        max-height: 90%;
+        max-width: 85%;
+        max-height: 85%;
         object-fit: contain;
       }
       .p-btn {
         text-decoration: none;
-        border-radius: 10px;
-        padding: 10px;
-        font-size: 13px;
+        border-radius: 12px;
+        padding: 12px 16px;
+        font-size: 14px;
         font-weight: 700;
-        transition: all 0.2s ease;
-        margin-bottom: 6px;
+        transition: all 0.3s ease;
+        margin-bottom: 10px;
         display: flex;
         justify-content: center;
+        align-items: center;
+        letter-spacing: 0.025em;
+      }
+      .p-btn:hover {
+        transform: scale(1.02);
       }
       /* Esto pone TODOS los títulos de sección en el azul oficial */
       h2 {
@@ -198,36 +235,36 @@
         </div>
         <nav
           id="mobile-menu"
-          class="hidden flex-col bg-white border-t border-gray-100 md:hidden pb-4 shadow-inner"
+          class="hidden flex-col bg-white/95 backdrop-blur-md border-t border-gray-100 md:hidden pb-4 shadow-2xl absolute w-full transition-all duration-300 origin-top transform opacity-0 scale-y-0"
         >
           <a
             href="#inicio"
-            class="mobile-link block px-6 py-4 text-[#003D7A] font-bold uppercase text-xs border-b border-gray-50"
+            class="mobile-link block px-6 py-4 text-[#003D7A] font-bold uppercase text-xs border-b border-gray-100 hover:bg-blue-50 transition-colors"
             >Inicio</a
           >
           <a
             href="#informacion"
-            class="mobile-link block px-6 py-4 text-[#003D7A] font-bold uppercase text-xs border-b border-gray-50"
+            class="mobile-link block px-6 py-4 text-[#003D7A] font-bold uppercase text-xs border-b border-gray-100 hover:bg-blue-50 transition-colors"
             >Información</a
           >
           <a
             href="#deportes"
-            class="mobile-link block px-6 py-4 text-[#003D7A] font-bold uppercase text-xs border-b border-gray-50"
+            class="mobile-link block px-6 py-4 text-[#003D7A] font-bold uppercase text-xs border-b border-gray-100 hover:bg-blue-50 transition-colors"
             >Deportes</a
           >
           <a
             href="#novedades"
-            class="mobile-link block px-6 py-4 text-[#003D7A] font-bold uppercase text-xs border-b border-gray-50"
+            class="mobile-link block px-6 py-4 text-[#003D7A] font-bold uppercase text-xs border-b border-gray-100 hover:bg-blue-50 transition-colors"
             >Novedades</a
           >
           <a
             href="#institucion"
-            class="mobile-link block px-6 py-4 text-[#003D7A] font-bold uppercase text-xs border-b border-gray-50"
+            class="mobile-link block px-6 py-4 text-[#003D7A] font-bold uppercase text-xs border-b border-gray-100 hover:bg-blue-50 transition-colors"
             >Institución</a
           >
           <a
             href="#contacto"
-            class="mobile-link block px-6 py-4 text-[#003D7A] font-bold uppercase text-xs"
+            class="mobile-link block px-6 py-4 text-[#003D7A] font-bold uppercase text-xs hover:bg-blue-50 transition-colors"
             >Contacto</a
           >
         </nav>
@@ -236,17 +273,29 @@
       <main class="w-full">
         <section
           id="inicio"
-          class="relative min-h-[500px] flex items-center justify-center overflow-hidden bg-gradient-to-r from-[#002244] to-[#003D7A]"
+          class="relative min-h-[500px] md:min-h-[600px] flex items-center justify-center overflow-hidden bg-gradient-to-r from-[#002244] to-[#003D7A]"
         >
-          <div class="absolute inset-0 bg-black/20"></div>
-          <div class="container mx-auto px-6 py-24 text-center relative z-10">
+          <div class="absolute inset-0 bg-black/20 z-0"></div>
+          <div
+            class="absolute inset-0 z-0 opacity-10"
+            style="
+              background-image: url(&quot;data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E&quot;);
+            "
+          ></div>
+          <div
+            class="container mx-auto px-6 py-24 text-center relative z-10 animate-[fadeIn_1s_ease-out_forwards]"
+          >
             <h1
-              class="text-3xl sm:text-5xl md:text-7xl font-black text-white mb-8 leading-tight drop-shadow-xl uppercase tracking-tight"
+              class="text-4xl sm:text-5xl md:text-7xl font-black text-white mb-6 leading-tight drop-shadow-2xl uppercase tracking-tighter animate-[slideUp_0.8s_ease-out_0.2s_forwards] opacity-0"
             >
-              FEDERACIÓN DE PATINAJE<br />GRAN BUENOS AIRES
+              FEDERACIÓN DE PATINAJE<br />
+              <span
+                class="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-white"
+                >GRAN BUENOS AIRES</span
+              >
             </h1>
             <p
-              class="text-2xl md:text-3xl text-blue-100 mb-12 font-medium drop-shadow-md max-w-3xl mx-auto"
+              class="text-xl md:text-3xl text-blue-100/90 mb-12 font-medium drop-shadow-md max-w-3xl mx-auto animate-[slideUp_0.8s_ease-out_0.4s_forwards] opacity-0"
             >
               Pasión, Disciplina y Excelencia sobre Ruedas
             </p>
@@ -278,7 +327,7 @@
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
               <div class="portal-card">
-                <div class="p-header h-24 bg-[#003D7A] text-white">
+                <div class="p-header">
                   <i data-lucide="book-open" class="w-10 h-12"></i>
                 </div>
                 <div class="p-body">
@@ -308,7 +357,7 @@
                 </div>
               </div>
               <div class="portal-card">
-                <div class="p-header h-24 bg-[#003D7A] text-white">
+                <div class="p-header">
                   <i data-lucide="calendar" class="w-10 h-10"></i>
                 </div>
                 <div class="p-body flex flex-col items-center">
@@ -334,7 +383,7 @@
               </div>
 
               <div class="portal-card">
-                <div class="p-header h-24 bg-[#003D7A] text-white">
+                <div class="p-header">
                   <i data-lucide="file-text" class="w-10 h-10"></i>
                 </div>
                 <div class="p-body flex flex-col items-center">
@@ -360,7 +409,7 @@
               </div>
 
               <div class="portal-card">
-                <div class="p-header h-24 bg-[#003D7A] text-white">
+                <div class="p-header">
                   <i data-lucide="shield-check" class="w-10 h-12"></i>
                 </div>
                 <div class="p-body">
@@ -1212,76 +1261,86 @@
             </div>
           </div>
         </section>
-        <section id="contacto" class="py-16 bg-white border-t">
-          <div class="container mx-auto px-4 max-w-6xl">
-            <h2 class="text-4xl font-bold text-center mb-12 text-[#003D7A]">
+        <section
+          id="contacto"
+          class="py-20 bg-gray-50 border-t border-gray-200"
+        >
+          <div class="container mx-auto px-6 max-w-6xl">
+            <h2
+              class="text-4xl font-black text-center mb-16 text-[#002244] uppercase tracking-tight"
+            >
               Contacto
             </h2>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div
+              class="grid grid-cols-1 lg:grid-cols-5 gap-12 bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100"
+            >
               <div
-                class="bg-white rounded-2xl border p-8 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between"
+                class="lg:col-span-2 p-10 flex flex-col justify-between bg-gradient-to-b from-white to-blue-50"
               >
                 <div>
-                  <h3 class="text-2xl font-bold mb-8 text-[#003D7A]">
+                  <h3
+                    class="text-2xl font-bold mb-10 text-[#003D7A] border-b-2 border-[#003D7A]/20 pb-4 inline-block"
+                  >
                     Sede Oficial
                   </h3>
 
-                  <div class="space-y-8">
-                    <div class="flex items-center gap-4 text-left">
-                      <span class="text-3xl w-12 flex justify-center">📍</span>
+                  <div class="space-y-10">
+                    <div class="flex items-start gap-5">
+                      <div
+                        class="w-12 h-12 rounded-xl bg-blue-100 text-[#003D7A] flex items-center justify-center flex-shrink-0 mt-1"
+                      >
+                        <i data-lucide="map-pin" class="w-6 h-6"></i>
+                      </div>
                       <div>
                         <p
-                          class="font-bold text-[#003D7A] text-lg leading-none mb-1"
+                          class="font-bold text-[#002244] text-lg leading-none mb-2"
                         >
                           Dirección
                         </p>
-                        <p class="text-gray-600 text-sm">
-                          Ombú 3334, San Justo. Buenos Aires 🇦🇷
+                        <p class="text-gray-600 font-medium">
+                          Ombú 3334, San Justo.<br />Buenos Aires 🇦🇷
                         </p>
                       </div>
                     </div>
 
-                    <div class="flex items-center gap-4 text-left">
-                      <span class="text-3xl w-12 flex justify-center">📧</span>
+                    <div class="flex items-start gap-5">
+                      <div
+                        class="w-12 h-12 rounded-xl bg-blue-100 text-[#003D7A] flex items-center justify-center flex-shrink-0 mt-1"
+                      >
+                        <i data-lucide="mail" class="w-6 h-6"></i>
+                      </div>
                       <div>
                         <p
-                          class="font-bold text-[#003D7A] text-lg leading-none mb-1"
+                          class="font-bold text-[#002244] text-lg leading-none mb-2"
                         >
                           Email
                         </p>
-                        <p class="text-gray-600 text-sm">
+                        <a
+                          href="mailto:fgba.prensa@gmail.com"
+                          class="text-gray-600 hover:text-[#003D7A] font-medium transition-colors"
+                        >
                           fgba.prensa@gmail.com
-                        </p>
+                        </a>
                       </div>
                     </div>
 
-                    <div class="flex items-center gap-4 text-left">
-                      <span class="w-12 flex justify-center">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="32"
-                          height="32"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="#25D366"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        >
-                          <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
-                        </svg>
-                      </span>
+                    <div class="flex items-start gap-5">
+                      <div
+                        class="w-12 h-12 rounded-xl bg-green-100 text-green-600 flex items-center justify-center flex-shrink-0 mt-1"
+                      >
+                        <i data-lucide="message-circle" class="w-6 h-6"></i>
+                      </div>
                       <div>
                         <p
-                          class="font-bold text-[#003D7A] text-lg leading-none mb-1"
+                          class="font-bold text-[#002244] text-lg leading-none mb-2"
                         >
                           WhatsApp
                         </p>
                         <a
                           href="https://wa.me/541154780320"
                           target="_blank"
-                          class="text-gray-600 text-sm hover:text-[#25D366] transition-colors font-medium"
+                          class="text-gray-600 hover:text-green-600 transition-colors font-medium"
                         >
                           +54 11 5478-0320
                         </a>
@@ -1290,9 +1349,11 @@
                   </div>
                 </div>
 
-                <div class="mt-10 pt-8 border-t border-gray-100">
-                  <h3 class="text-xl font-bold mb-5 text-[#003D7A]">
-                    ¡Seguinos en Redes Sociales!
+                <div class="mt-12 pt-8 border-t border-blue-200/50">
+                  <h3
+                    class="text-lg font-bold mb-6 text-[#002244] uppercase tracking-wide"
+                  >
+                    Redes Sociales
                   </h3>
                   <div class="flex gap-5">
                     <a
@@ -1349,8 +1410,11 @@
               </div>
 
               <div
-                class="h-[450px] md:h-full min-h-[400px] rounded-2xl overflow-hidden border shadow-sm"
+                class="lg:col-span-3 h-[450px] md:h-[500px] lg:h-full min-h-[400px] bg-gray-100 relative group"
               >
+                <div
+                  class="absolute inset-0 bg-blue-900/10 pointer-events-none group-hover:bg-transparent transition-colors duration-500 z-10"
+                ></div>
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.042852233083!2d-58.5574564!3d-34.6788229!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc6333630f55d%3A0xe212574061807469!2zT21iw7ogMzMzNCwgQjE3NTQgU2FuIEp1c3RvLCBQcm92aW5jaWEgZGUgQnVlbm9zIEFpcmVz!5e0!3m2!1ses!2sar!4v1710000000000!5m2!1ses!2sar"
                   width="100%"
@@ -1358,6 +1422,7 @@
                   style="border: 0"
                   allowfullscreen=""
                   loading="lazy"
+                  class="filter grayscale-[30%] contrast-[1.1] group-hover:grayscale-0 transition-all duration-500"
                 >
                 </iframe>
               </div>
@@ -1376,153 +1441,132 @@
         <section class="py-12 bg-white">
           <div class="container mx-auto px-4">
             <div
-              class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+              class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 items-center justify-center"
             >
-              <div
-                class="relative h-64 md:h-80 overflow-hidden rounded-2xl shadow-lg border-4 border-white group"
+              <a
+                href="https://www.instagram.com/serenarte.estampatextil/"
+                target="_blank"
+                class="block w-full h-32 relative group"
               >
-                <a
-                  href="https://www.instagram.com/serenarte.estampatextil/"
-                  target="_blank"
-                  class="block w-full h-full"
-                >
-                  <img
-                    loading="lazy"
-                    src="./public/images/design-mode/serenarte.jpg"
-                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    alt="Sponsor Serenarte"
-                  />
-                  <div
-                    class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300"
-                  ></div>
-                </a>
-              </div>
+                <img
+                  loading="lazy"
+                  src="./public/images/design-mode/serenarte.jpg"
+                  class="w-full h-full object-contain filter grayscale opacity-70 transition-all duration-300 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105"
+                  alt="Sponsor Serenarte"
+                />
+              </a>
 
-              <div
-                class="relative h-64 md:h-80 overflow-hidden rounded-2xl shadow-lg border-4 border-white group"
+              <a
+                href="https://www.instagram.com/mediasmodellinigolter/"
+                target="_blank"
+                class="block w-full h-32 relative group"
               >
-                <a
-                  href="https://www.instagram.com/mediasmodellinigolter/"
-                  target="_blank"
-                  class="block w-full h-full"
-                >
-                  <img
-                    loading="lazy"
-                    src="./public/images/design-mode/modellini1.jpg"
-                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    alt="Sponsor Modellini"
-                  />
-                  <div
-                    class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300"
-                  ></div>
-                </a>
-              </div>
+                <img
+                  loading="lazy"
+                  src="./public/images/design-mode/modellini1.jpg"
+                  class="w-full h-full object-contain filter grayscale opacity-70 transition-all duration-300 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105"
+                  alt="Sponsor Modellini"
+                />
+              </a>
 
-              <div
-                class="relative h-64 md:h-80 overflow-hidden rounded-2xl shadow-lg border-4 border-white group"
+              <a
+                href="https://www.instagram.com/nadibel_todoparapatin/"
+                target="_blank"
+                class="block w-full h-32 relative group"
               >
-                <a
-                  href="https://www.instagram.com/nadibel_todoparapatin/"
-                  target="_blank"
-                  class="block w-full h-full"
-                >
-                  <img
-                    loading="lazy"
-                    src="./public/images/design-mode/Nadibel.jpg"
-                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    alt="Sponsor NadiBel"
-                  />
-                  <div
-                    class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300"
-                  ></div>
-                </a>
-              </div>
-              <div
-                class="relative h-64 md:h-80 overflow-hidden rounded-2xl shadow-lg border-4 border-white group"
+                <img
+                  loading="lazy"
+                  src="./public/images/design-mode/Nadibel.jpg"
+                  class="w-full h-full object-contain filter grayscale opacity-70 transition-all duration-300 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105"
+                  alt="Sponsor NadiBel"
+                />
+              </a>
+
+              <a
+                href="https://www.instagram.com/fvproducciones_/"
+                target="_blank"
+                class="block w-full h-32 relative group"
               >
-                <a
-                  href="https://www.instagram.com/fvproducciones_/"
-                  target="_blank"
-                  class="block w-full h-full"
-                >
-                  <img
-                    loading="lazy"
-                    src="./public/images/design-mode/fvproducciones.png"
-                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    alt="Sponsor FVPRODUCCIONES"
-                  />
-                  <div
-                    class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300"
-                  ></div>
-                </a>
-              </div>
-              <div
-                class="relative h-64 md:h-80 overflow-hidden rounded-2xl shadow-lg border-4 border-white group"
+                <img
+                  loading="lazy"
+                  src="./public/images/design-mode/fvproducciones.png"
+                  class="w-full h-full object-contain filter grayscale opacity-70 transition-all duration-300 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105"
+                  alt="Sponsor FVPRODUCCIONES"
+                />
+              </a>
+
+              <a
+                href="https://www.instagram.com/juguetes_lucerito?igsh=eXlmdmNlNWtrMDY1"
+                target="_blank"
+                class="block w-full h-32 relative group"
               >
-                <a
-                  href="https://www.instagram.com/juguetes_lucerito?igsh=eXlmdmNlNWtrMDY1"
-                  target="_blank"
-                  class="block w-full h-full"
-                >
-                  <img
-                    loading="lazy"
-                    src="./public/images/design-mode/lucerito.png"
-                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    alt="Sponsor LUCERITO"
-                  />
-                  <div
-                    class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300"
-                  ></div>
-                </a>
-              </div>
+                <img
+                  loading="lazy"
+                  src="./public/images/design-mode/lucerito.png"
+                  class="w-full h-full object-contain filter grayscale opacity-70 transition-all duration-300 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105"
+                  alt="Sponsor LUCERITO"
+                />
+              </a>
             </div>
           </div>
         </section>
       </main>
-      <footer class="w-full px-12 py-8 bg-white border-t-2">
-        <div class="flex gap-4 w-full justify-center flex-wrap mb-0">
-          <div class="w-44 h-44 items-center justify-center flex">
+      <section class="w-full px-6 py-12 bg-gray-50 border-t border-gray-100">
+        <div
+          class="max-w-6xl mx-auto flex gap-8 justify-center flex-wrap items-center"
+        >
+          <div
+            class="w-24 h-24 md:w-32 md:h-32 flex items-center justify-center group cursor-pointer"
+          >
             <img
               loading="lazy"
               src="./public/images/companies/cap.jpeg"
               alt="CAP"
-              class="w-full h-full object-contain"
+              class="w-full h-full object-contain filter grayscale opacity-60 transition-all duration-300 group-hover:grayscale-0 group-hover:opacity-100"
             />
           </div>
-          <div class="w-44 h-44 items-center justify-center flex">
+          <div
+            class="w-24 h-24 md:w-32 md:h-32 flex items-center justify-center group cursor-pointer"
+          >
             <img
               loading="lazy"
               src="./public/images/companies/comite-olimpico.jpeg"
               alt="COA"
-              class="w-full h-full object-contain"
+              class="w-full h-full object-contain filter grayscale opacity-60 transition-all duration-300 group-hover:grayscale-0 group-hover:opacity-100"
             />
           </div>
-          <div class="w-44 h-44 items-center justify-center flex">
+          <div
+            class="w-24 h-24 md:w-32 md:h-32 flex items-center justify-center group cursor-pointer"
+          >
             <img
               loading="lazy"
               src="./public/images/companies/enard.jpeg"
               alt="ENARD"
-              class="w-full h-full object-contain"
+              class="w-full h-full object-contain filter grayscale opacity-60 transition-all duration-300 group-hover:grayscale-0 group-hover:opacity-100"
             />
           </div>
-          <div class="w-44 h-44 items-center justify-center flex">
+          <div
+            class="w-24 h-24 md:w-32 md:h-32 flex items-center justify-center group cursor-pointer"
+          >
             <img
               loading="lazy"
               src="./public/images/companies/world-skate-america.jpeg"
               alt="WSA"
-              class="w-full h-full object-contain"
+              class="w-full h-full object-contain filter grayscale opacity-60 transition-all duration-300 group-hover:grayscale-0 group-hover:opacity-100"
             />
           </div>
-          <div class="w-44 h-44 items-center justify-center flex">
+          <div
+            class="w-24 h-24 md:w-32 md:h-32 flex items-center justify-center group cursor-pointer"
+          >
             <img
               loading="lazy"
               src="./public/images/companies/world-skate.jpeg"
               alt="World Skate"
-              class="w-full h-full object-contain"
+              class="w-full h-full object-contain filter grayscale opacity-60 transition-all duration-300 group-hover:grayscale-0 group-hover:opacity-100"
             />
           </div>
         </div>
-      </footer>
+      </section>
     </div>
     <footer
       class="bg-[#0f172a] text-white py-12 w-full border-t border-slate-800"
@@ -1567,15 +1611,33 @@
 
       if (btnMovil && menuMovil) {
         btnMovil.onclick = () => {
-          menuMovil.classList.toggle("hidden");
-          menuMovil.classList.toggle("flex");
+          if (menuMovil.classList.contains("hidden")) {
+            menuMovil.classList.remove("hidden");
+            // Pequeño timeout para permitir que el display block se aplique antes de la transición
+            setTimeout(() => {
+              menuMovil.classList.add("flex", "opacity-100", "scale-y-100");
+              menuMovil.classList.remove("opacity-0", "scale-y-0");
+            }, 10);
+          } else {
+            menuMovil.classList.remove("opacity-100", "scale-y-100");
+            menuMovil.classList.add("opacity-0", "scale-y-0");
+            setTimeout(() => {
+              menuMovil.classList.add("hidden");
+              menuMovil.classList.remove("flex");
+            }, 300); // Coincide con la duración de la transición
+          }
         };
+
         // Cerrar al clickear link
         links.forEach(
           (l) =>
             (l.onclick = () => {
-              menuMovil.classList.add("hidden");
-              menuMovil.classList.remove("flex");
+              menuMovil.classList.remove("opacity-100", "scale-y-100");
+              menuMovil.classList.add("opacity-0", "scale-y-0");
+              setTimeout(() => {
+                menuMovil.classList.add("hidden");
+                menuMovil.classList.remove("flex");
+              }, 300);
             }),
         );
       }
