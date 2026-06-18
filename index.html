@@ -937,22 +937,24 @@ h2 {
         </a>
       </div>
       
-        <div class="relative h-64 md:h-80 overflow-hidden rounded-2xl shadow-lg border-4 border-white group">
+      <div class="relative h-64 md:h-80 overflow-hidden rounded-2xl shadow-lg border-4 border-white group">
         <a href="https://www.instagram.com/nadibel_todoparapatin/" target="_blank" class="block w-full h-full">
           <img src="./public/images/design-mode/Nadibel.jpg" 
                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
                alt="Sponsor NadiBel"/>
           <div class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300"></div>
         </a>
-    </div>
-       <div class="relative h-64 md:h-80 overflow-hidden rounded-2xl shadow-lg border-4 border-white group">
+      </div>
+
+      <div class="relative h-64 md:h-80 overflow-hidden rounded-2xl shadow-lg border-4 border-white group">
         <a href="https://www.instagram.com/fvproducciones_/" target="_blank" class="block w-full h-full">
           <img src="./public/images/design-mode/fvproducciones.png" 
                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
                alt="Sponsor FVPRODUCCIONES"/>
           <div class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300"></div>
         </a>
-    </div>
+      </div>
+
       <div class="relative h-64 md:h-80 overflow-hidden rounded-2xl shadow-lg border-4 border-white group">
         <a href="https://www.instagram.com/juguetes_lucerito?igsh=eXlmdmNlNWtrMDY1" target="_blank" class="block w-full h-full">
           <img src="./public/images/design-mode/lucerito.png" 
@@ -960,11 +962,15 @@ h2 {
                alt="Sponsor LUCERITO"/>
           <div class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300"></div>
         </a>
+      </div>
+
     </div>
   </div>
 </section>
 
-<footer class="w-full px-12 py-8 bg-white border-t-2">
+</main> 
+
+<div class="w-full px-12 py-8 bg-white border-t-2">
   <div class="flex gap-4 w-full justify-center flex-wrap mb-0">
     <div class="w-44 h-44 items-center justify-center flex">
       <img src="./public/images/companies/cap.jpeg" alt="CAP" class="w-full h-full object-contain" />
@@ -981,8 +987,9 @@ h2 {
     <div class="w-44 h-44 items-center justify-center flex">
       <img src="./public/images/companies/world-skate.jpeg" alt="World Skate" class="w-full h-full object-contain" />
     </div>
- </main> 
   </div> 
+</div> 
+
 <footer class="bg-[#0f172a] text-white py-12 w-full border-t border-slate-800">
   <div class="container mx-auto px-4 text-center">
     <p class="text-base font-bold tracking-tight mb-2">
@@ -992,9 +999,11 @@ h2 {
     <p class="text-[10px] opacity-60 font-bold uppercase tracking-[0.2em]">
       Todos los derechos reservados <span id="year-final"></span>
     </p>
-        <p class="text-[12px] mt-4 opacity-60 uppercase tracking-[0.2em]">
+    
+    <p class="text-[12px] mt-4 opacity-60 uppercase tracking-[0.2em]">
       Visitas: <span class="font-bold">10.398✨</span>
     </p>
+    
     <p class="text-[10px] mt-8 opacity-40 uppercase tracking-[0.2em]">
       Diseño y Desarrollo por 
       <a href="mailto:camilacastillo.work@gmail.com" 
@@ -1002,13 +1011,14 @@ h2 {
         Camila Castillo
       </a>
     </p>
-
   </div>
 </footer>
 
 <script>
-    // 1. ESTO ACTIVA LOS ICONOS (Vital)
-    lucide.createIcons();
+    // 1. ACTIVA LOS ICONOS (Con chequeo de seguridad)
+    if (typeof lucide !== 'undefined') {
+      lucide.createIcons();
+    }
 
     // 2. AÑO AUTOMÁTICO
     const spanAnio = document.getElementById("year-final");
@@ -1024,12 +1034,12 @@ h2 {
         menuMovil.classList.toggle("hidden");
         menuMovil.classList.toggle("flex");
       };
-      // Cerrar al clickear link
+      
       links.forEach(l => l.onclick = () => {
         menuMovil.classList.add("hidden");
         menuMovil.classList.remove("flex");
       });
     }
-  </script>
+</script>
 </body>
 </html>
